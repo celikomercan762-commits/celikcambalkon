@@ -1,203 +1,111 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çelik Cam Balkon Sistemleri</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Çelik Cam Balkon Sistemleri</title>
 
-    <style>
-        body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f8fc; color: #0a2a43;}
+<style>
+body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fa; color: #0a2a43;}
+header {text-align: center; background: white; padding: 15px 0; position: relative;}
+header img {width: 150px;}
 
-        header {text-align: center; background: white; padding: 15px 0; position: sticky; top: 0; z-index: 999;}
-        header img {width: 140px;}
+.menu-btn {position: absolute; left: 20px; top: 22px; font-size: 28px; color: #002855; cursor: pointer;}
 
-        /* Menü Butonu */
-        .menu-btn {
-            position: absolute;
-            left: 20px;
-            top: 23px;
-            font-size: 30px;
-            color: #002855;
-            cursor: pointer;
-        }
+.side-menu {
+    position: fixed; top: 0; left: -260px; width: 260px; height: 100%;
+    background: #002855; transition: 0.3s ease; padding-top: 80px; z-index: 999;
+}
+.side-menu a {
+    display: block; padding: 18px 25px; font-size: 22px;
+    color: white; text-decoration: none;
+}
+.side-menu a:hover { background: rgba(255,255,255,0.1); }
 
-        /* Menü Panel */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            left: -260px;
-            width: 260px;
-            height: 100%;
-            background: #002855;
-            transition: 0.3s ease;
-            padding-top: 80px;
-            z-index: 1000;
-        }
-        .side-menu a {
-            display: block;
-            padding: 18px 25px;
-            font-size: 22px;
-            color: white;
-            text-decoration: none;
-        }
-        .side-menu a:hover { background: rgba(255,255,255,0.15); }
+/* Menü dışına tıklayınca kapanma alanı */
+.overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3); display: none; z-index: 998;
+}
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.3);
-            display: none;
-            z-index: 900;
-        }
+.section {background: white; margin: 20px; padding: 25px; border-radius: 20px;}
+h2 {font-size: 28px; text-align: center; color: #002855;}
+ul {font-size: 20px; line-height: 1.7;}
 
-        .section {
-            background: white;
-            margin: 20px;
-            padding: 25px;
-            border-radius: 20px;
-        }
+.img-box img {width: 100%; border-radius: 15px;}
 
-        h2 { font-size: 28px; text-align: center; color: #002855; font-weight: bold; }
-        ul { font-size: 19px; line-height: 1.7; }
+.product {text-align: center; margin-top: 10px;}
+.product img {width: 180px; height: auto; margin-bottom: 10px;}
 
-        .img-box img {
-            width: 100%;
-            border-radius: 14px;
-        }
+select {
+    width: 90%; padding: 12px; border-radius: 12px;
+    font-size: 18px; border: 1px solid #ccc; margin-bottom: 15px;
+}
 
-        /* Ürün Kartları */
-        .product {text-align: center; margin-top: 10px;}
-        .product img { width: 180px; border-radius: 12px; }
+.btn {
+    padding: 16px; width: 90%; background: #00d84a; color: white;
+    font-size: 20px; border-radius: 12px; border: none;
+    cursor: pointer; font-weight: bold;
+}
 
-        select {
-            width: 90%;
-            padding: 12px;
-            border-radius: 12px;
-            font-size: 18px;
-            border: 1px solid #ccc;
-            margin-bottom: 12px;
-        }
-
-        .btn {
-            width: 90%;
-            padding: 16px;
-            background: #00d84a;
-            color: white;
-            font-size: 21px;
-            border-radius: 12px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            transition: .2s;
-        }
-        .btn:hover { background: #04c743; }
-
-        /* WhatsApp Sabit */
-        .wp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            padding: 16px 20px;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1200;
-        }
-        .wp-btn img {width: 34px;}
-
-    </style>
+/* WhatsApp Sabit Buton */
+.wp-btn {
+    position: fixed; bottom: 20px; right: 20px;
+    width: 65px; height: 65px; border-radius: 50%;
+    background: #25D366; display: flex;
+    align-items: center; justify-content: center;
+    cursor: pointer; z-index: 999;
+}
+.wp-btn img {width: 35px;}
+</style>
 </head>
+
 <body>
 
 <header>
     <span class="menu-btn" onclick="toggleMenu()">☰</span>
-    <img src="logo.PNG">
+    <img src="logo.PNG" alt="Logo">
 </header>
+
+<div class="overlay" onclick="toggleMenu()" id="overlay"></div>
 
 <div class="side-menu" id="sideMenu">
     <a href="#hizmetler" onclick="toggleMenu()">Ana Sayfa</a>
     <a href="#hakkimizda" onclick="toggleMenu()">Hakkımızda</a>
     <a href="#yedek" onclick="toggleMenu()">Yedek Parça</a>
-    <a href="https://wa.me/905050045075" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/905050045075">WhatsApp</a>
 </div>
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
 <script>
-function toggleMenu() {
+function toggleMenu(){
     let menu = document.getElementById("sideMenu");
     let overlay = document.getElementById("overlay");
-    if (menu.style.left === "0px") {
-        menu.style.left = "-260px";
-        overlay.style.display = "none";
+    if(menu.style.left === "0px"){
+        menu.style.left = "-260px"; overlay.style.display = "none";
     } else {
-        menu.style.left = "0px";
-        overlay.style.display = "block";
+        menu.style.left = "0px"; overlay.style.display = "block";
     }
 }
 </script>
 
-<!-- HİZMETLER -->
 <div id="hizmetler"></div>
 
 <div class="section">
     <h2>Cam Balkon Sistemleri</h2>
     <ul>
         <li>Panoramik şeffaf görünüm</li>
-        <li>Kolay temizlik</li>
-        <li>Dayanıklı profil yapısı</li>
-        <li>4 Mevsim kullanım</li>
+        <li>Kolay temizlenebilir sistem</li>
+        <li>Dayanıklı uzun ömürlü yapı</li>
+        <li>Dört mevsim kullanım özelliği</li>
     </ul>
     <div class="img-box"><img src="IMG_9348.jpeg"></div>
 </div>
 
-<div class="section">
-    <h2>Sürgülü Cam Sistemleri</h2>
-    <ul>
-        <li>Geniş açıklıklarda kullanım</li>
-        <li>Estetik ve modern tasarım</li>
-    </ul>
-    <div class="img-box"><img src="IMG_9351.jpeg"></div>
-</div>
-
-<div class="section">
-    <h2>Katlanır Cam Sistemleri</h2>
-    <ul>
-        <li>Panelsiz tam açılma</li>
-        <li>Güçlü izolasyon</li>
-    </ul>
-    <div class="img-box"><img src="IMG_9350.jpeg"></div>
-</div>
-
-<div class="section">
-    <h2>Giyotin Cam Sistemleri</h2>
-    <ul>
-        <li>Motorlu sistem</li>
-        <li>Mükemmel yalıtım</li>
-    </ul>
-    <div class="img-box"><img src="IMG_9349.jpeg"></div>
-</div>
-
-<div class="section">
-    <h2>Kış Bahçesi Sistemleri</h2>
-    <ul>
-        <li>Ek yaşam alanı</li>
-        <li>Estetik tasarım</li>
-    </ul>
-    <div class="img-box"><img src="IMG_9352.jpeg"></div>
-</div>
-
-<!-- HAKKIMIZDA -->
 <div id="hakkimizda" class="section">
     <h2>Hakkımızda</h2>
-    <p style="font-size:19px;text-align:center;">
-        Çelik Cam Balkon olarak, İstanbul’da profesyonel montaj, servis ve yedek parça hizmeti sunuyoruz.
-    </p>
+    <p>Çelik Cam Balkon olarak İstanbul genelinde profesyonel montaj, servis ve yedek parça tedariki sağlıyoruz.</p>
 </div>
 
-<!-- YEDEK PARÇA -->
 <div id="yedek" class="section">
     <h2>Cam Balkon Yedek Parça Satışı</h2>
 
@@ -206,7 +114,7 @@ function toggleMenu() {
         <h3>Piyasa Kolu</h3>
         <select id="kolRenk">
             <option>Antrasit Gri</option>
-            <option>Eloksal Gümüş</option>
+            <option>Eloksal (Gümüş)</option>
             <option>Bronz</option>
             <option>Siyah</option>
             <option>Özel Renk</option>
@@ -216,8 +124,7 @@ function toggleMenu() {
 
     <div class="product">
         <img src="IMG_9255.jpeg">
-        <h3>Teker Takımı</h3>
-        <p>(50 Düz + 50 Kertikli)</p>
+        <h3>Teker Takımı (50 Düz + 50 Kertikli)</h3>
         <button class="btn" onclick="wpTeker()">Sipariş Ver</button>
     </div>
 
@@ -225,6 +132,11 @@ function toggleMenu() {
         <img src="IMG_9256.jpeg">
         <h3>Kapak Takımı</h3>
         <p>(50 Sağ + 50 Sol)</p>
+        <select id="kapakAdet">
+            <option value="100">100 Adet</option>
+            <option value="200">200 Adet</option>
+            <option value="300">300 Adet</option>
+        </select>
         <button class="btn" onclick="wpKapak()">Sipariş Ver</button>
     </div>
 
@@ -232,68 +144,70 @@ function toggleMenu() {
         <img src="IMG_9258.jpeg">
         <h3>Dikme Kapak</h3>
         <p>(50 Sağ + 50 Sol)</p>
+        <select id="dikmeAdet">
+            <option value="100">100 Adet</option>
+            <option value="200">200 Adet</option>
+            <option value="300">300 Adet</option>
+        </select>
         <button class="btn" onclick="wpDikme()">Sipariş Ver</button>
     </div>
 
     <div class="product">
         <img src="IMG_9260.jpeg">
         <h3>Alüminyum Fitil</h3>
+        <p>Metraj WhatsApp’ta belirtilecek</p>
         <select id="fitil1Renk">
             <option>Antrasit Gri</option>
-            <option>Eloksal Gümüş</option>
+            <option>Eloksal</option>
             <option>Bronz</option>
             <option>Siyah</option>
             <option>Özel Renk</option>
         </select>
         <button class="btn" onclick="wpFitil1()">Sipariş Ver</button>
-        <p>Metraj WhatsApp'ta belirtilecek</p>
     </div>
 
     <div class="product">
         <img src="IMG_9259.jpeg">
         <h3>Çift Kanallı Fitil</h3>
+        <p>Metraj WhatsApp’ta belirtilecek</p>
         <select id="fitil2Renk">
             <option>Antrasit Gri</option>
-            <option>Eloksal Gümüş</option>
+            <option>Eloksal</option>
             <option>Bronz</option>
             <option>Siyah</option>
             <option>Özel Renk</option>
         </select>
         <button class="btn" onclick="wpFitil2()">Sipariş Ver</button>
-        <p>Metraj WhatsApp'ta belirtilecek</p>
     </div>
 </div>
 
-<!-- WP Buton -->
 <div class="wp-btn" onclick="window.location.href='https://wa.me/905050045075'">
     <img src="wp.png">
 </div>
 
-<footer style="text-align:center; padding:20px; font-size:15px;">
-    © 2025 Tüm Hakları Saklıdır - Çelik Cam Balkon
-</footer>
-
 <script>
-function wpKol() {
+function wpKol(){
     let renk = document.getElementById("kolRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Piyasa Kolu - Renk: ${renk}`;
+    location.href=`https://wa.me/905050045075?text=Piyasa Kolu - Renk: ${renk}`;
 }
 function wpTeker(){
-    location.href = `https://wa.me/905050045075?text=Teker Takımı (50 Düz + 50 Kertikli)`;
+    location.href=`https://wa.me/905050045075?text=Teker Takımı - 50 Düz + 50 Kertikli`;
 }
 function wpKapak(){
-    location.href = `https://wa.me/905050045075?text=Kapak Takımı (50 Sağ + 50 Sol)`;
+    let adet = document.getElementById("kapakAdet").value;
+    location.href=`https://wa.me/905050045075?text=Kapak Takımı - ${adet} Adet (50 Sağ + 50 Sol)`;
 }
 function wpDikme(){
-    location.href = `https://wa.me/905050045075?text=Dikme Kapak (50 Sağ + 50 Sol)`;
+    let adet = document.getElementById("dikmeAdet").value;
+    location.href=`https://wa.me/905050045075?text=Dikme Kapak - ${adet} Adet (50 Sağ + 50 Sol)`;
 }
 function wpFitil1(){
     let renk = document.getElementById("fitil1Renk").value;
-    location.href = `https://wa.me/905050045075?text=Alüminyum Fitil - ${renk}`;
+    location.href=`https://wa.me/905050045075?text=Alüminyum Fitil - Renk: ${renk} - Metraj: Yazınız`;
 }
 function wpFitil2(){
     let renk = document.getElementById("fitil2Renk").value;
-    location.href = `https://wa.me/905050045075?text=Çift Kanallı Fitil - ${renk}`;
+    location.href=`https://wa.me/905050045075?text=Çift Kanallı Fitil - Renk: ${renk} - Metraj: Yazınız`;
 }
 </script>
 
