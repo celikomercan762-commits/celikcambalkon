@@ -14,23 +14,38 @@
         color: #0a2a43;
     }
 
-    /* MENU */
-    .menu-icon {
-        font-size: 34px;
+    /* Sabit WhatsApp Butonu */
+    .wp-fixed {
+        position: fixed;
+        right: 15px;
+        bottom: 20px;
+        background: #25D366;
+        padding: 15px 18px;
+        border-radius: 50%;
+        color: white;
+        font-size: 28px;
         cursor: pointer;
-        background: none;
+        z-index: 99999;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Menü */
+    .menu-icon {
+        font-size: 35px;
         color: #002855;
+        cursor: pointer;
         position: absolute;
-        left: 18px;
+        left: 15px;
     }
 
     #mobileMenu {
         display: none;
         background: #002855;
-        text-align: left;
         width: 100%;
+        text-align: left;
         position: absolute;
-        top: 70px;
+        top: 75px;
+        z-index: 1000;
     }
 
     #mobileMenu a {
@@ -38,14 +53,14 @@
         color: white;
         text-decoration: none;
         padding: 14px 20px;
-        border-top: 1px solid #003f88;
+        border-bottom: 1px solid #003f88;
         font-size: 18px;
     }
 
-    /* HEADER */
+    /* Header */
     header {
-        width: 100%;
         background: white;
+        width: 100%;
         padding: 12px 0;
         box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
         position: sticky;
@@ -63,7 +78,6 @@
         width: auto;
     }
 
-    /* Bölümler */
     .section {
         background: white;
         margin: 20px;
@@ -71,9 +85,9 @@
         border-radius: 20px;
     }
     h2 {
-        font-size: 28px;
         text-align: center;
         color: #002855;
+        font-size: 28px;
         margin-bottom: 20px;
     }
     ul {
@@ -94,12 +108,13 @@
         border-radius: 20px;
         text-align: center;
     }
+
     #hakkimizda p {
         font-size: 20px;
         line-height: 1.7;
     }
 
-    /* ÜRÜN SATIŞ */
+    /* Satış Bölümü */
     #satis {
         background: #ffffff;
         margin: 20px;
@@ -114,27 +129,17 @@
         text-align: center;
         margin-bottom: 20px;
     }
-
     .urun-box img {
-        width: 120px;
-        height: auto;
+        width: 130px;
         margin-bottom: 10px;
     }
-
-    .urun-box h3 {
-        color: #002855;
-        font-size: 20px;
-        margin: 8px 0;
-    }
-
     .urun-box select {
         width: 100%;
         padding: 10px;
+        margin-bottom: 10px;
         border-radius: 8px;
         border: 1px solid #cbd5e0;
-        margin-bottom: 10px;
     }
-
     .urun-box button {
         width: 100%;
         padding: 12px;
@@ -146,25 +151,21 @@
         cursor: pointer;
     }
 
-    .urun-box button:hover {
-        background: #009e36;
-    }
-
-    /* İLETİŞİM */
     .contact-area {
         display: flex;
         justify-content: center;
         gap: 15px;
         padding: 25px 10px;
     }
+
     .btn {
         padding: 18px 25px;
         border-radius: 40px;
-        font-size: 20px;
-        font-weight: bold;
         color: white;
         border: none;
         cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
     }
     .whatsapp { background: #00d84a; }
     .call { background: #002855; }
@@ -176,12 +177,12 @@
         font-size: 18px;
         color: #002855;
     }
-</style>
 
+</style>
 </head>
+
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="top-bar">
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
@@ -196,119 +197,140 @@
     <a href="https://wa.me/905050045075">WhatsApp İletişim</a>
 </div>
 
+<!-- ---------------------------------------------------------- -->
+<!--  CAM BALKON SİSTEMLERİ YAPILAN İŞLER BÖLÜMÜ  -->
+<!-- ---------------------------------------------------------- -->
+
+<div class="section">
+    <h2>Cam Balkon Sistemleri</h2>
+    <ul>
+        <li>Dört mevsime uygun yaşam alanı</li>
+        <li>Kolay temizlenen pratik yapı</li>
+        <li>Panoramik manzara</li>
+        <li>Dayanıklı uzun ömürlü sistem</li>
+    </ul>
+    <div class="img-box">
+        <img src="IMG_9348.jpeg">
+    </div>
+</div>
+
+<div class="section">
+    <h2>Sürgülü Cam Sistemleri</h2>
+    <div class="img-box"><img src="IMG_9351.jpeg"></div>
+</div>
+
+<div class="section">
+    <h2>Katlanır Cam Sistemleri</h2>
+    <div class="img-box"><img src="IMG_9350.jpeg"></div>
+</div>
+
+<div class="section">
+    <h2>Giyotin Cam Sistemleri</h2>
+    <div class="img-box"><img src="IMG_9349.jpeg"></div>
+</div>
+
+<div class="section">
+    <h2>Kış Bahçesi Sistemleri</h2>
+    <div class="img-box"><img src="IMG_9352.jpeg"></div>
+</div>
+
+<div class="section">
+    <h2>Ofis Bölme Cam Sistemleri</h2>
+    <div class="img-box"><img src="IMG_9354.jpeg"></div>
+</div>
+
+<div class="section">
+    <h2>Alüminyum Doğrama Sistemleri</h2>
+    <div class="img-box"><img src="IMG_9353.jpeg"></div>
+</div>
+
+<!-- ---------------------------------------------------------- -->
 <!-- HAKKIMIZDA -->
+<!-- ---------------------------------------------------------- -->
+
 <div id="hakkimizda">
     <h2>Hakkımızda</h2>
-    <p>Çelik Cam Balkon olarak modern yaşam alanlarına estetik ve güvenilir çözümler sunuyoruz.</p>
-    <p>İstanbul genelinde profesyonel montaj ve kaliteli malzeme ile hizmet veriyoruz.</p>
+    <p>Çelik Cam Balkon olarak İstanbul genelinde kaliteli cam sistemleri uygulamaları yapıyoruz.</p>
+    <p>Müşteri memnuniyeti ve profesyonel hizmet önceliğimizdir.</p>
 </div>
 
+<!-- ---------------------------------------------------------- -->
+<!-- Yedek Parça Satışı -->
+<!-- ---------------------------------------------------------- -->
 
-<!-- ÜRÜN SATIŞ BÖLÜMÜ -->
 <div id="satis">
-    <h2>Cam Balkon Yedek Parça Satışı</h2>
+    <h2>Cam Balkon Yedek Parça Toplu Satış</h2>
 
-    <!-- TEKER DÜZ -->
+    <!-- Piyasa Kol -->
+    <div class="urun-box">
+        <img src="IMG_9253.jpeg">
+        <h3>Piyasa Kolu (Renk Seçmeli)</h3>
+
+        <label>Renk:</label>
+        <select id="kolRenk">
+            <option value="Antrasit Gri">Antrasit Gri</option>
+            <option value="Eloksal Gümüş">Eloksal Gümüş</option>
+            <option value="Bronz">Bronz</option>
+            <option value="Siyah">Siyah</option>
+        </select>
+
+        <label>Adet:</label>
+        <select id="kolAdet">
+            <option value="50">50 Adet</option>
+            <option value="100">100 Adet</option>
+            <option value="150">150 Adet</option>
+            <option value="200">200 Adet</option>
+        </select>
+
+        <button onclick="wpKol()">Sipariş Ver</button>
+    </div>
+
+    <!-- TEKER TAKIMI -->
     <div class="urun-box">
         <img src="IMG_9255.jpeg">
-        <h3>Düz Teker</h3>
-        <label>Adet:</label>
-        <select id="tekerDuz">
+        <h3>Teker Takımı (Düz + Kertikli 50/50)</h3>
+
+        <label>Toplam Adet:</label>
+        <select id="tekerToplam">
             <option value="50">50 Adet</option>
             <option value="100">100 Adet</option>
             <option value="150">150 Adet</option>
             <option value="200">200 Adet</option>
         </select>
-        <button onclick="wpSiparis('Düz Teker', document.getElementById('tekerDuz').value)">Sipariş Ver</button>
+
+        <button onclick="wpTeker()">Sipariş Ver</button>
     </div>
 
-    <!-- TEKER KERTİK -->
-    <div class="urun-box">
-        <img src="IMG_9255.jpeg">
-        <h3>Kertikli Teker</h3>
-        <label>Adet:</label>
-        <select id="tekerKertik">
-            <option value="50">50 Adet</option>
-            <option value="100">100 Adet</option>
-            <option value="150">150 Adet</option>
-            <option value="200">200 Adet</option>
-        </select>
-        <button onclick="wpSiparis('Kertikli Teker', document.getElementById('tekerKertik').value)">Sipariş Ver</button>
-    </div>
-
-    <!-- SAĞ KAPAK -->
-    <div class="urun-box">
-        <img src="IMG_9256.jpeg">
-        <h3>Sağ Kapak</h3>
-        <label>Adet:</label>
-        <select id="sagKapak">
-            <option value="50">50 Adet</option>
-            <option value="100">100 Adet</option>
-            <option value="150">150 Adet</option>
-            <option value="200">200 Adet</option>
-        </select>
-        <button onclick="wpSiparis('Sağ Kapak', document.getElementById('sagKapak').value)">Sipariş Ver</button>
-    </div>
-
-    <!-- SOL KAPAK -->
-    <div class="urun-box">
-        <img src="IMG_9256.jpeg">
-        <h3>Sol Kapak</h3>
-        <label>Adet:</label>
-        <select id="solKapak">
-            <option value="50">50 Adet</option>
-            <option value="100">100 Adet</option>
-            <option value="150">150 Adet</option>
-            <option value="200">200 Adet</option>
-        </select>
-        <button onclick="wpSiparis('Sol Kapak', document.getElementById('solKapak').value)">Sipariş Ver</button>
-    </div>
-
-    <!-- SAĞ DİKME -->
+    <!-- KAPAK TAKIMI -->
     <div class="urun-box">
         <img src="IMG_9258.jpeg">
-        <h3>Sağ Dikme Kapak</h3>
-        <label>Adet:</label>
-        <select id="sagDikmeKapak">
+        <h3>Kapak Takımı (Sağ + Sol 50/50)</h3>
+
+        <label>Toplam Adet:</label>
+        <select id="kapakToplam">
             <option value="50">50 Adet</option>
             <option value="100">100 Adet</option>
             <option value="150">150 Adet</option>
             <option value="200">200 Adet</option>
         </select>
-        <button onclick="wpSiparis('Sağ Dikme Kapak', document.getElementById('sagDikmeKapak').value)">Sipariş Ver</button>
-    </div>
 
-    <!-- SOL DİKME -->
-    <div class="urun-box">
-        <img src="IMG_9258.jpeg">
-        <h3>Sol Dikme Kapak</h3>
-        <label>Adet:</label>
-        <select id="solDikmeKapak">
-            <option value="50">50 Adet</option>
-            <option value="100">100 Adet</option>
-            <option value="150">150 Adet</option>
-            <option value="200">200 Adet</option>
-        </select>
-        <button onclick="wpSiparis('Sol Dikme Kapak', document.getElementById('solDikmeKapak').value)">Sipariş Ver</button>
+        <button onclick="wpKapak()">Sipariş Ver</button>
     </div>
-
 </div>
 
-
+<!-- ---------------------------------------------------------- -->
 <!-- İLETİŞİM -->
+<!-- ---------------------------------------------------------- -->
+
 <div class="contact-area">
-    <button class="btn whatsapp" onclick="window.location.href='https://wa.me/905050045075'">
-        WhatsApp İletişim
-    </button>
-    <button class="btn call" onclick="window.location.href='tel:05050045075'">
-        Ara: 0505 004 50 75
-    </button>
+    <button class="btn whatsapp" onclick="window.location.href='https://wa.me/905050045075'">WhatsApp İletişim</button>
+    <button class="btn call" onclick="window.location.href='tel:05050045075'">Ara: 0505 004 50 75</button>
 </div>
 
-<footer>
-    © celikcambalkon
-</footer>
+<footer>© Çelik Cam Balkon</footer>
 
+<!-- SABİT WHATSAPP -->
+<div class="wp-fixed" onclick="window.location.href='https://wa.me/905050045075'">💬</div>
 
 <script>
 function toggleMenu() {
@@ -316,11 +338,30 @@ function toggleMenu() {
     menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
 
-// WHATSAPP SİPARİŞ
-function wpSiparis(urun, adet) {
-    let mesaj = `Merhaba, ${urun} için ${adet} adet sipariş vermek istiyorum.`;
-    let tel = "905050045075";
-    window.location.href = `https://wa.me/${tel}?text=${encodeURIComponent(mesaj)}`;
+// Piyasa Kolu Siparişi
+function wpKol() {
+    let adet = document.getElementById("kolAdet").value;
+    let renk = document.getElementById("kolRenk").value;
+    let mesaj = `Merhaba,%0A*Piyasa Kolu* %0AAdet: ${adet} %0ARenk: ${renk}`;
+    window.location.href = `https://wa.me/905050045075?text=${mesaj}`;
+}
+
+// Teker Takımı Siparişi
+function wpTeker() {
+    let toplam = Number(document.getElementById("tekerToplam").value);
+    let duz = toplam / 2;
+    let kertik = toplam / 2;
+    let mesaj = `Merhaba,%0A*Teker Takımı Siparişi*%0AToplam: ${toplam}%0A- Düz Teker: ${duz}%0A- Kertikli Teker: ${kertik}`;
+    window.location.href = `https://wa.me/905050045075?text=${mesaj}`;
+}
+
+// Kapak Takımı Siparişi
+function wpKapak() {
+    let toplam = Number(document.getElementById("kapakToplam").value);
+    let sag = toplam / 2;
+    let sol = toplam / 2;
+    let mesaj = `Merhaba,%0A*Kapak Takımı Siparişi*%0AToplam: ${toplam}%0A- Sağ Kapak: ${sag}%0A- Sol Kapak: ${sol}`;
+    window.location.href = `https://wa.me/905050045075?text=${mesaj}`;
 }
 </script>
 
