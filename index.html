@@ -8,72 +8,81 @@
 <style>
     body {
         font-family: Arial, sans-serif;
+        background-color: #f3f5f7;
         margin: 0;
-        background: #f1f4f8;
-        color: #111;
+        padding: 0;
         text-align: center;
     }
 
-    .container {
-        background: #fff;
-        width: 92%;
-        margin: 20px auto;
-        padding: 25px;
+    header img {
+        width: 180px;
+        margin-top: 20px;
+    }
+
+    .card {
+        background: white;
+        width: 90%;
+        margin: 15px auto;
+        padding: 20px;
         border-radius: 18px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: left;
     }
 
     h2 {
-        color: #002b5b;
-        margin-bottom: 20px;
+        text-align: center;
+        color: #0c2c57;
         font-size: 26px;
+        margin-bottom: 12px;
     }
 
     ul {
-        text-align: left;
         font-size: 18px;
-        line-height: 32px;
-        margin-bottom: 25px;
+        margin-left: 20px;
+        line-height: 1.6;
     }
 
-    img {
+    .system-img {
         width: 100%;
-        border-radius: 18px;
+        border-radius: 15px;
         margin-top: 15px;
     }
 
-    /* WhatsApp Butonu */
-    .wp-btn {
-        display: block;
-        width: 85%;
-        margin: 40px auto;
-        background: #25D366;
-        color: white;
-        padding: 16px 10px;
-        border-radius: 50px;
-        font-size: 20px;
-        text-decoration: none;
-        font-weight: bold;
+    .btn-box {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 30px 0;
     }
 
-    .wp-btn img {
-        width: 28px;
-        vertical-align: middle;
-        margin-right: 8px;
+    .btn {
+        padding: 13px 25px;
+        border-radius: 35px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
     }
+
+    .wp { background: #25D366; }
+    .call { background: #0c2c57; }
 
     footer {
-        margin: 40px 0;
-        color: #777;
+        margin: 20px 0;
         font-size: 14px;
+        color: #666;
     }
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- 1️⃣ Cam Balkon -->
-<div class="container">
+<header>
+    <img src="logo.png" alt="Çelik Cam Balkon Logo">
+</header>
+
+<!-- CAM BALKON -->
+<div class="card">
     <h2>Cam Balkon Sistemleri</h2>
     <ul>
         <li>Dört mevsime uygun geniş yaşam alanı</li>
@@ -81,11 +90,11 @@
         <li>Manzarayı kapatmayan estetik görüntü</li>
         <li>Dayanıklı ve uzun ömürlü sistem</li>
     </ul>
-    <img src="img_1.jpeg" alt="Cam Balkon">
+    <img src="IMG_9348.jpeg" class="system-img">
 </div>
 
-<!-- 2️⃣ Sürgülü Sistemler -->
-<div class="container">
+<!-- SÜRGÜLÜ CAM -->
+<div class="card">
     <h2>Sürgülü Cam Sistemleri</h2>
     <ul>
         <li>Kolay kullanım sağlayan sürgülü yapı</li>
@@ -93,24 +102,24 @@
         <li>Modern ve şık tasarım</li>
         <li>Isı ve ses yalıtımı sağlar</li>
     </ul>
-    <img src="img_2.jpeg" alt="Sürgülü Sistem">
+    <img src="IMG_9349.jpeg" class="system-img">
 </div>
 
-<!-- 3️⃣ Katlanır Sistem -->
-<div class="container">
+<!-- KATLANIR CAM -->
+<div class="card">
     <h2>Katlanır Cam Sistemleri</h2>
     <ul>
-        <li>Cam paneller tamamen açılabilir</li>
+        <li>Cam panellerin tamamen açılabilmesi</li>
         <li>Kullanım alanını genişletir</li>
         <li>Her mevsim uygun çözüm</li>
         <li>Estetik ve güçlü görünüm</li>
-        <li><strong>Isı camlı olarak uygulanabilir</strong></li>
+        <li><b>Isı camlı olarak uygulanabilir</b></li>
     </ul>
-    <img src="img_3.jpeg" alt="Katlanır Sistem">
+    <img src="IMG_9350.jpeg" class="system-img">
 </div>
 
-<!-- 4️⃣ Ofis Bölme Cam Sistemleri -->
-<div class="container">
+<!-- OFİS BÖLME CAM -->
+<div class="card">
     <h2>Ofis Bölme Cam Sistemleri</h2>
     <ul>
         <li>Şeffaf, estetik ve modern görünüm</li>
@@ -118,29 +127,40 @@
         <li>Ses yalıtımı ve gizlilik sağlar</li>
         <li>Hızlı montaj ve uzun ömür</li>
     </ul>
-    <img src="ofis.jpeg" alt="Ofis Bölme">
+    <img src="IMG_9354.jpeg" class="system-img">
 </div>
 
-<!-- 5️⃣ Alüminyum Doğrama Sistemleri -->
-<div class="container">
+<!-- ALÜMİNYUM -->
+<div class="card">
     <h2>Alüminyum Doğrama Sistemleri</h2>
     <ul>
-        <li>Dayanıklı güçlü kasa yapısı</li>
-        <li>Yalıtımlı ve uzun ömürlü</li>
-        <li>Modern mimari uyumu</li>
-        <li>Isı cam uyumlu</li>
+        <li>Yapısal dayanıklılık sağlar</li>
+        <li>Isı ve ses yalıtımı sağlar</li>
+        <li>Estetik modern tasarım</li>
     </ul>
-    <img src="aluminyum.jpeg" alt="Alüminyum Sistem">
+    <img src="IMG_9353.jpeg" class="system-img">
 </div>
 
-<!-- WhatsApp Butonu -->
-<a class="wp-btn" href="https://wa.me/905050045075" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-    WhatsApp İletişim
-</a>
+<!-- KAPALI TERAS / BİOCLIMATIC -->
+<div class="card">
+    <h2>Kış Bahçesi - Pergola Sistemleri</h2>
+    <ul>
+        <li>Dört mevsim yaşam alanı</li>
+        <li>Modern ve yüksek kalite</li>
+        <li>Uzun ömürlü dayanıklı sistem</li>
+    </ul>
+    <img src="IMG_9351.jpeg" class="system-img">
+</div>
+
+
+<!-- WHATSAPP & CALL BUTTON -->
+<div class="btn-box">
+    <a class="btn wp" href="https://wa.me/905050045075">WhatsApp İletişim</a>
+    <a class="btn call" href="tel:05050045075">Ara: 0505 004 50 75</a>
+</div>
 
 <footer>
-    © 2025 Çelik Cam Balkon – Tüm Hakları Saklıdır
+© 2025 Çelik Cam Balkon – Tüm Hakları Saklıdır
 </footer>
 
 </body>
