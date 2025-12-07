@@ -366,3 +366,68 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 </script>
+/* Mobil Menü */
+.menu-icon {
+    font-size: 34px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #002855;
+    color: white;
+    display: inline-block;
+}
+
+#mobileMenu {
+    display: none;
+    background: #002855;
+    text-align: left;
+}
+
+#mobileMenu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-top: 1px solid #003f88;
+    font-size: 18px;
+}
+
+#mobileMenu a:hover {
+    background: #004a99;
+}
+<!-- Mobil Menü -->
+<div class="menu-icon" onclick="toggleMenu()">☰ Menü</div>
+
+<div id="mobileMenu">
+    <a href="#">Ana Sayfa</a>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#satis">Yedek Parça</a>
+    <a href="https://wa.me/905050045075">İletişim</a>
+</div>
+<script>
+// Menü Aç / Kapat
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
+// Menüden tıklayınca yumuşak kaydırma + menünün kapanması
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        let href = this.getAttribute('href');
+
+        if (href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 70,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        // Menü kapanması
+        document.getElementById("mobileMenu").style.display = "none";
+    });
+});
+</script>
