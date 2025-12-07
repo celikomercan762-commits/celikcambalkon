@@ -30,6 +30,7 @@
             font-size: 28px;
             text-align: center;
             color: #002855;
+            margin-bottom: 20px;
         }
         ul {
             font-size: 20px;
@@ -41,7 +42,7 @@
             border-radius: 15px;
         }
 
-        /* Hakkımızda Bölümü */
+        /* --- Hakkımızda --- */
         #hakkimizda {
             background: #e9edf1;
             margin: 20px;
@@ -54,7 +55,53 @@
             line-height: 1.7;
             max-width: 900px;
             margin: 0 auto 15px auto;
-            color: #0a2a43;
+        }
+
+        /* --- Ürün Satış Baloncuk --- */
+        #satis {
+            margin: 20px;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+        }
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .product-card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+            color: #002855;
+        }
+        .wp-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .wp-btn:hover {
+            opacity: 0.9;
+        }
+
+        @media (min-width: 700px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .contact-area {
@@ -181,11 +228,45 @@
     </div>
 </div>
 
-<!-- Hakkımızda Bölümü -->
+<!-- Hakkımızda -->
 <div id="hakkimizda">
     <h2>Hakkımızda</h2>
-    <p><strong>Çelik Cam Balkon</strong> olarak, modern yaşam alanlarına estetik ve dayanıklılık kazandıran çözümler sunuyoruz. Katlanır cam sistemleri, sürgülü cam sistemleri, giyotin cam, kış bahçesi ve alüminyum doğrama alanlarında profesyonel hizmet veriyoruz.</p>
-    <p>İstanbul genelinde uzman ekibimizle, kaliteli malzeme ve titiz montaj anlayışıyla müşteri memnuniyetini her zaman ön planda tutuyoruz. Uygun fiyat, güvenilir hizmet ve uzun ömürlü çözümler için yanınızdayız.</p>
+    <p><strong>Çelik Cam Balkon</strong> olarak modern yaşam alanlarına estetik ve güvenilir çözümler sunuyoruz.</p>
+    <p>İstanbul genelinde profesyonel montaj ve kaliteli malzemeyle müşteri memnuniyeti odaklı çalışıyoruz.</p>
+</div>
+
+<!-- SATIŞ BÖLÜMÜ -->
+<div id="satis">
+    <h2>Cam Balkon Yedek Parça Satışı</h2>
+    
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="IMG_9253.jpeg" alt="">
+            <h3>Cam Balkon Piyasa Kolu</h3>
+            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Piyasa%20Kolu%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG_9255.jpeg" alt="">
+            <h3>Cam Balkon Tekerlek</h3>
+            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Tekerlek%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG_9258.jpeg" alt="">
+            <h3>Cam Balkon Kapak</h3>
+            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Kapak%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+        </div>
+
+        <div class="product-card">
+            <img src="IMG_9259.jpeg" alt="">
+            <h3>Cam Balkon Alüminyum Fitil</h3>
+            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Fitil%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+        </div>
+
+    </div>
+
 </div>
 
 <div class="contact-area">
