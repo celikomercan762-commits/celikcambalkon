@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Çelik Cam Balkon Sistemleri</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,7 +43,7 @@
             border-radius: 15px;
         }
 
-        /* --- Hakkımızda --- */
+        /* Hakkımızda */
         #hakkimizda {
             background: #e9edf1;
             margin: 20px;
@@ -57,7 +58,7 @@
             margin: 0 auto 15px auto;
         }
 
-        /* --- Ürün Satış Baloncuk --- */
+        /* --- Ürün Satış Baloncukları --- */
         #satis {
             margin: 20px;
             text-align: center;
@@ -72,7 +73,7 @@
             padding: 20px;
             box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
         }
-        .product-card img {
+        .product-slider img {
             width: 100%;
             height: 220px;
             object-fit: cover;
@@ -94,9 +95,7 @@
             cursor: pointer;
             font-size: 18px;
         }
-        .wp-btn:hover {
-            opacity: 0.9;
-        }
+        .wp-btn:hover { opacity: 0.9; }
 
         @media (min-width: 700px) {
             .product-grid {
@@ -130,9 +129,9 @@
             color: #002855;
         }
     </style>
+
 </head>
 <body>
-
 <header>
     <img src="logo.PNG" alt="Logo">
 </header>
@@ -227,7 +226,6 @@
         <img src="IMG_9353.jpeg">
     </div>
 </div>
-
 <!-- Hakkımızda -->
 <div id="hakkimizda">
     <h2>Hakkımızda</h2>
@@ -235,40 +233,81 @@
     <p>İstanbul genelinde profesyonel montaj ve kaliteli malzemeyle müşteri memnuniyeti odaklı çalışıyoruz.</p>
 </div>
 
-<!-- SATIŞ BÖLÜMÜ -->
+<!-- Yedek Parça Satışı -->
 <div id="satis">
     <h2>Cam Balkon Yedek Parça Satışı</h2>
-    
+
     <div class="product-grid">
 
+        <!-- Piyasa Kolu -->
         <div class="product-card">
-            <img src="IMG_9253.jpeg" alt="">
+            <div class="product-slider" id="slider1">
+                <img src="IMG_9253.jpeg">
+                <img src="IMG_9254.jpeg">
+            </div>
             <h3>Cam Balkon Piyasa Kolu</h3>
-            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Piyasa%20Kolu%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+            <button class="wp-btn"
+            onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Piyasa%20Kolu%20siparişi%20vermek%20istiyorum'">
+            WhatsApp Sipariş Ver</button>
         </div>
 
+        <!-- Tekerlek -->
         <div class="product-card">
-            <img src="IMG_9255.jpeg" alt="">
+            <div class="product-slider" id="slider2">
+                <img src="IMG_9255.jpeg">
+            </div>
             <h3>Cam Balkon Tekerlek</h3>
-            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Tekerlek%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+            <button class="wp-btn"
+            onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Tekerlek%20siparişi%20vermek%20istiyorum'">
+            WhatsApp Sipariş Ver</button>
         </div>
 
+        <!-- Kapak -->
         <div class="product-card">
-            <img src="IMG_9258.jpeg" alt="">
+            <div class="product-slider" id="slider3">
+                <img src="IMG_9258.jpeg">
+                <img src="IMG_9256.jpeg">
+            </div>
             <h3>Cam Balkon Kapak</h3>
-            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Kapak%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+            <button class="wp-btn"
+            onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Kapak%20siparişi%20vermek%20istiyorum'">
+            WhatsApp Sipariş Ver</button>
         </div>
 
+        <!-- Fitil -->
         <div class="product-card">
-            <img src="IMG_9259.jpeg" alt="">
-            <h3>Cam Balkon Alüminyum Fitil</h3>
-            <button class="wp-btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Fitil%20siparişi%20vermek%20istiyorum'">WhatsApp Sipariş Ver</button>
+            <div class="product-slider" id="slider4">
+                <img src="IMG_9259.jpeg">
+                <img src="IMG_9260.jpeg">
+            </div>
+            <h3>Cam Balkon Alüminyum Fitili</h3>
+            <button class="wp-btn"
+            onclick="window.location.href='https://wa.me/905050045075?text=Cam%20Balkon%20Fitili%20siparişi%20vermek%20istiyorum'">
+            WhatsApp Sipariş Ver</button>
         </div>
 
     </div>
 
 </div>
 
+<script>
+function startSlider(sliderId) {
+    const slider = document.getElementById(sliderId);
+    let index = 0;
+    const images = slider.getElementsByTagName("img");
+
+    if (images.length <= 1) return;
+
+    setInterval(() => {
+        images[index].style.display = "none";
+        index = (index + 1) % images.length;
+        images[index].style.display = "block";
+    }, 3000);
+}
+
+["slider1", "slider2", "slider3", "slider4"].forEach(id => startSlider(id));
+</script>
+<!-- İletişim Alanı -->
 <div class="contact-area">
     <button class="btn whatsapp" onclick="window.location.href='https://wa.me/905050045075'">
         WhatsApp İletişim
