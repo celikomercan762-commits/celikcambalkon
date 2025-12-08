@@ -259,8 +259,8 @@ function toggleMenu() {
 <!-- Çift Fitil -->
 <!-- Çift Fitil -->
 <div class="product">
-    <img src="IMG_9259.jpeg" alt="Çift Fitil">
-    <h3>Çift Fitil</h3>
+    <img src="IMG_9259.jpeg" alt="Çift Fitil"
+style="width:100%; height:120px; object-fit:contain; padding:15px 0;">
     <p>Metraj WhatsApp'tan iletilir</p>
 
     <select id="cfitilRenk">
@@ -273,10 +273,7 @@ function toggleMenu() {
 
     <button class="btn" onclick="wpCiftFitil()">Sipariş Ver</button>
 </div>
-function wpCiftFitil() {
-    let renk = document.getElementById("cfitilRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Çift Fitil - Renk: ${renk}`;
-}
+
 
 
 <!-- Footer -->
