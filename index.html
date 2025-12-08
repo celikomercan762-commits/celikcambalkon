@@ -11,11 +11,13 @@
         header {text-align: center; background: white; padding: 20px 0; position: relative;}
         header img {width: 160px;}
 
+        /* Menü Butonu */
         .menu-btn {
             position: absolute; left: 18px; top: 28px;
             font-size: 32px; color: #002855; cursor: pointer;
         }
 
+        /* Yan Menü */
         .side-menu {
             position: fixed; top: 0; left: -260px;
             width: 260px; height: 100%;
@@ -29,6 +31,7 @@
         }
         .side-menu a:hover {background: rgba(255,255,255,0.1);}
 
+        /* Kapanma Alanı */
         #menuOverlay {
             display: none;
             position: fixed; top: 0; left: 0;
@@ -48,25 +51,71 @@
         ul {font-size: 20px; line-height: 1.6;}
 
         .img-box img {
+            width: 100%; border-radius: 15px;
+            margin-bottom: 10px;
+        }
+
+        .order-btn {
             width: 100%;
-            border-radius: 15px;
+            background: #00d600;
+            color: white;
+            font-size: 19px;
+            border-radius: 12px;
+            padding: 14px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Yedek Parça */
+        .product img {
+            width: 180px;
+            margin: auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        select {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            margin-bottom: 15px;
         }
 
         .btn {
-            width: 90%; padding: 16px;
-            background: #00d84a; color: white;
-            font-size: 22px; border-radius: 14px;
+            width: 100%;
+            padding: 16px;
+            background: #00d84a;
+            color: white;
+            font-size: 22px;
+            border-radius: 14px;
             border: none; font-weight: bold;
-            cursor: pointer;
+            cursor: pointer; margin-bottom: 15px;
         }
+
+        /* Sabit WhatsApp Butonu */
+        .wp-fab {
+            position: fixed; bottom: 22px; right: 22px;
+            background: #25D366; width: 65px; height: 65px;
+            border-radius: 50%; display: flex;
+            justify-content: center; align-items: center;
+            cursor: pointer; z-index: 99999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+        .wp-fab img {width: 38px;}
     </style>
+
 </head>
 
 <body>
 
 <header>
     <span class="menu-btn" onclick="toggleMenu()">☰</span>
-    <img src="logo.PNG" alt="Logo" loading="lazy">
+    <img src="logo.PNG" alt="Logo">
 </header>
 
 <div class="side-menu" id="sideMenu">
@@ -82,7 +131,6 @@
 function toggleMenu() {
     let menu = document.getElementById("sideMenu");
     let overlay = document.getElementById("menuOverlay");
-
     if (menu.style.left === "0px") {
         menu.style.left = "-260px";
         overlay.style.display = "none";
@@ -96,86 +144,118 @@ function toggleMenu() {
 <div id="hizmetler" class="section">
     <h2>Hizmetlerimiz</h2>
 
+    <!-- Cam Balkon -->
     <h3>Cam Balkon Sistemleri</h3>
     <ul>
         <li>Panoramik şeffaf görünüm</li>
         <li>Kolay temizlenebilir sistem</li>
-        <li>Dayanıklı ve uzun ömürlü yapı</li>
+        <li>Dayanıklı, uzun ömürlü yapı</li>
         <li>Dört mevsim kullanım özelliği</li>
     </ul>
     <div class="img-box">
-        <img src="IMG_9348.jpeg" loading="lazy" width="100%" alt="Cam Balkon Sistemleri">
+        <img src="IMG_9348.jpeg" alt="Cam Balkon">
     </div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905050045075?text=Cam Balkon m² fiyatı istiyorum.'">m² Fiyat Al</button>
+    <a class="order-btn" href="https://wa.me/905050045075?text=Cam Balkon Sistemleri m² fiyat bilgisi almak istiyorum">
+        m² Fiyat Al (WhatsApp)
+    </a>
 
+    <!-- Sürgülü -->
     <h3>Sürgülü Cam Sistemleri</h3>
     <ul>
-        <li>Geniş açıklıklar için ideal</li>
+        <li>Geniş alanlar için ideal kullanım</li>
         <li>Kolay hareket kabiliyeti</li>
-        <li>Modern ve estetik tasarım</li>
+        <li>Şık modern görünüm</li>
     </ul>
     <div class="img-box">
-        <img src="IMG_9351.jpeg" loading="lazy" width="100%" alt="Sürgülü Cam Sistemleri">
+        <img src="IMG_9351.jpeg" alt="Sürgülü Sistem">
     </div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905050045075?text=Sürgülü Cam Sistemleri m² fiyatı istiyorum.'">m² Fiyat Al</button>
+    <a class="order-btn" href="https://wa.me/905050045075?text=Sürgülü Cam Sistemleri m² fiyat bilgisi almak istiyorum">
+        m² Fiyat Al (WhatsApp)
+    </a>
 
+    <!-- Katlanır -->
     <h3>Katlanır Cam Sistemleri</h3>
     <ul>
-        <li>Tam açılır panel yapısı</li>
-        <li>Mükemmel izolasyon</li>
+        <li>Tam açılabilir panel yapısı</li>
+        <li>Güçlü izolasyon</li>
     </ul>
     <div class="img-box">
-        <img src="IMG_9350.jpeg" loading="lazy" width="100%" alt="Katlanır Cam Sistemleri">
+        <img src="IMG_9350.jpeg" alt="Katlanır Sistem">
     </div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905050045075?text=Katlanır Cam Sistemleri m² fiyatı istiyorum.'">m² Fiyat Al</button>
+    <a class="order-btn" href="https://wa.me/905050045075?text=Katlanır Cam Sistemleri m² fiyat bilgisi almak istiyorum">
+        m² Fiyat Al (WhatsApp)
+    </a>
 
+    <!-- Giyotin -->
     <h3>Giyotin Cam Sistemleri</h3>
     <ul>
-        <li>Motorlu kontrol sistemi</li>
-        <li>Güvenli ve konforlu kullanım</li>
+        <li>Motorlu kontrollü kullanım</li>
+        <li>Modern ve güvenli çözüm</li>
     </ul>
     <div class="img-box">
-        <img src="IMG_9349.jpeg" loading="lazy" width="100%" alt="Giyotin Cam Sistemleri">
+        <img src="IMG_9349.jpeg" alt="Giyotin Sistem">
     </div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905050045075?text=Giyotin Cam Sistemleri m² fiyatı istiyorum.'">m² Fiyat Al</button>
+    <a class="order-btn" href="https://wa.me/905050045075?text=Giyotin Cam Sistemleri m² fiyat bilgisi almak istiyorum">
+        m² Fiyat Al (WhatsApp)
+    </a>
 
+    <!-- Kış Bahçesi -->
     <h3>Kış Bahçesi Sistemleri</h3>
     <ul>
         <li>Konforlu yaşam alanı</li>
         <li>Dört mevsim keyifli kullanım</li>
     </ul>
     <div class="img-box">
-        <img src="IMG_9352.jpeg" loading="lazy" width="100%" alt="Kış Bahçesi Sistemleri">
+        <img src="IMG_9352.jpeg" alt="Kış Bahçesi">
     </div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905050045075?text=Kış Bahçesi m² fiyatı istiyorum.'">m² Fiyat Al</button>
+    <a class="order-btn" href="https://wa.me/905050045075?text=Kış Bahçesi Sistemleri m² fiyat bilgisi almak istiyorum">
+        m² Fiyat Al (WhatsApp)
+    </a>
 
+    <!-- Ofis bölme -->
     <h3>Ofis Bölme Sistemleri</h3>
     <ul>
         <li>Modern, şeffaf görünüm</li>
         <li>Alan verimliliği sağlar</li>
     </ul>
     <div class="img-box">
-        <img src="IMG_9354.jpeg" loading="lazy" width="100%" alt="Ofis Bölme Sistemleri">
+        <img src="IMG_9354.jpeg" alt="Ofis Bölme">
     </div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905050045075?text=Ofis Bölme Sistemleri m² fiyatı istiyorum.'">m² Fiyat Al</button>
+    <a class="order-btn" href="https://wa.me/905050045075?text=Ofis Bölme Sistemleri m² fiyat bilgisi almak istiyorum">
+        m² Fiyat Al (WhatsApp)
+    </a>
 
+    <!-- Alüminyum Doğrama -->
     <h3>Alüminyum Doğrama Sistemleri</h3>
     <ul>
         <li>Uzun ömürlü kullanım</li>
         <li>Isı yalıtımlı güçlü yapı</li>
     </ul>
     <div class="img-box">
-        <img src="IMG_9353.jpeg" loading="lazy" width="100%" alt="Alüminyum Doğrama Sistemleri">
+        <img src="IMG_9353.jpeg" alt="Alüminyum Doğrama">
     </div>
-    <button class="btn" onclick="window.location.href='https://wa.me/905050045075?text=Alüminyum Doğrama m² fiyatı istiyorum.'">m² Fiyat Al</button>
+    <a class="order-btn" href="https://wa.me/905050045075?text=Alüminyum Doğrama Sistemleri m² fiyat bilgisi almak istiyorum">
+        m² Fiyat Al (WhatsApp)
+    </a>
+
 </div>
+<!-- ——— Hakkımızda ——— -->
+<div id="hakkimizda" class="section">
+    <h2>Hakkımızda</h2>
+    <p>
+        Çelik Cam Balkon olarak İstanbul genelinde profesyonel cam balkon montajı,
+        servis hizmeti ve orijinal yedek parça tedariki sağlıyoruz.  
+        Kaliteli ürün, uzman işçilik ve müşteri memnuniyeti bizim için önceliklidir.
+    </p>
+</div>
+
 <!-- ——— Yedek Parça Satış ——— -->
 <div id="yedek" class="section">
     <h2>Cam Balkon Yedek Parça Satışı</h2>
 
-    <!-- Kolu Kilit Sistemleri -->
+    <!-- Kolu Kilit Sistemi -->
     <div class="product">
-        <img src="IMG_9253.jpeg" loading="lazy" width="100%" alt="Kolu Kilit Sistemi">
+        <img src="IMG_9253.jpeg" alt="Kolu Kilit Sistemi">
         <h3>Kolu Kilit Sistemi</h3>
         <select id="kolRenk">
             <option>Antrasit Gri</option>
@@ -189,7 +269,7 @@ function toggleMenu() {
 
     <!-- Teker Takımı -->
     <div class="product">
-        <img src="IMG_9255.jpeg" loading="lazy" width="100%" alt="Teker Takımı">
+        <img src="IMG_9255.jpeg" alt="Teker Takımı">
         <h3>Teker Takımı</h3>
         <select id="tekerAdet">
             <option>100 Adet</option>
@@ -201,7 +281,7 @@ function toggleMenu() {
 
     <!-- Kapak Takımı -->
     <div class="product">
-        <img src="IMG_9256.jpeg" loading="lazy" width="100%" alt="Kapak Takımı">
+        <img src="IMG_9256.jpeg" alt="Kapak Takımı">
         <h3>Kapak Takımı</h3>
         <select id="kapakAdet">
             <option>100 Adet</option>
@@ -213,7 +293,7 @@ function toggleMenu() {
 
     <!-- Dikme Kapak -->
     <div class="product">
-        <img src="IMG_9258.jpeg" loading="lazy" width="100%" alt="Dikme Kapak">
+        <img src="IMG_9258.jpeg" alt="Dikme Kapak">
         <h3>Dikme Kapak</h3>
         <select id="dikmeAdet">
             <option>100 Adet</option>
@@ -225,14 +305,14 @@ function toggleMenu() {
 
     <!-- Alüminyum Fitil -->
     <div class="product">
-        <img src="IMG_9260.jpeg" loading="lazy" width="100%" alt="Alüminyum Fitil">
+        <img src="IMG_9260.jpeg" alt="Alüminyum Fitil">
         <h3>Alüminyum Fitil</h3>
         <button class="btn" onclick="wpFitil()">Sipariş Ver</button>
     </div>
 
     <!-- Çift Fitil -->
     <div class="product">
-        <img src="IMG_9259.jpeg" loading="lazy" width="100%" alt="Çift Fitil">
+        <img src="IMG_9259.jpeg" alt="Çift Fitil">
         <h3>Çift Fitil</h3>
         <select id="cfitilRenk">
             <option>Antrasit Gri</option>
@@ -245,9 +325,9 @@ function toggleMenu() {
     </div>
 
 </div>
-<!-- WhatsApp Floating Button -->
+<!-- WhatsApp Sabit Buton -->
 <a class="wp-fab" href="https://wa.me/905050045075" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" loading="lazy" width="38" alt="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 <!-- Footer -->
@@ -274,35 +354,13 @@ function wpDikme() {
     window.location.href = `https://wa.me/905050045075?text=Dikme Kapak - ${adet}`;
 }
 function wpFitil() {
-    window.location.href = `https://wa.me/905050045075?text=Alüminyum Fitil - Metraj Belirtiniz.`;
+    window.location.href = `https://wa.me/905050045075?text=Alüminyum Fitil Metraj Bilgisi`;
 }
 function wpCfitil() {
     let renk = document.getElementById("cfitilRenk").value;
     window.location.href = `https://wa.me/905050045075?text=Çift Fitil - Renk: ${renk}`;
 }
 </script>
-/* Dropdownları tam genişlik yap */
-select {
-    width: 100% !important;
-    display: block;
-}
 
-/* Sabit WhatsApp Butonu görünür yapılsın */
-.wp-fab {
-    position: fixed;
-    bottom: 22px;
-    right: 22px;
-    width: 62px;
-    height: 62px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
-.wp-fab img {
-    width: 38px;
-}
 </body>
 </html>
