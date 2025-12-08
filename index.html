@@ -46,7 +46,7 @@
         h2 {font-size:28px; text-align:center; color:#002855; font-weight:800;}
         h3 {color:#002855; font-weight:700;}
 
-        ul {font-size:18px; line-height:1.6; margin-bottom:15px;}
+        ul {list-style:disc; padding-left:22px; font-size:18px; line-height:1.6; margin-bottom:15px;}
 
         .img-box img {
             width:100%; border-radius:15px;
@@ -100,6 +100,7 @@
         .wp-fab img {width:38px;}
     </style>
 </head>
+
 <body>
 
 <header>
@@ -115,27 +116,53 @@
 </div>
 
 <div id="menuOverlay" onclick="toggleMenu()"></div>
-
 <!-- ——— Hizmetlerimiz ——— -->
 <div id="hizmetler" class="section">
     <h2>Hizmetlerimiz</h2>
 
     <h3>Cam Balkon Sistemleri</h3>
+    <ul>
+        <li>Panoramik şeffaf görünüm</li>
+        <li>Kolay temizlenebilir sistem</li>
+        <li>Dayanıklı ve uzun ömürlü yapı</li>
+        <li>Dört mevsim kullanım özelliği</li>
+    </ul>
     <div class="img-box"><img src="IMG_9348.jpeg"></div>
 
     <h3>Sürgülü Cam Sistemleri</h3>
+    <ul>
+        <li>Geniş açıklıklar için ideal</li>
+        <li>Kolay hareket kabiliyeti</li>
+        <li>Modern ve estetik tasarım</li>
+    </ul>
     <div class="img-box"><img src="IMG_9351.jpeg"></div>
 
     <h3>Katlanır Cam Sistemleri</h3>
+    <ul>
+        <li>Tam açılır panel yapısı</li>
+        <li>Mükemmel izolasyon</li>
+    </ul>
     <div class="img-box"><img src="IMG_9350.jpeg"></div>
 
     <h3>Giyotin Cam Sistemleri</h3>
+    <ul>
+        <li>Motorlu kontrol sistemi</li>
+        <li>Güvenli ve konforlu kullanım</li>
+    </ul>
     <div class="img-box"><img src="IMG_9349.jpeg"></div>
 
     <h3>Kış Bahçesi Sistemleri</h3>
+    <ul>
+        <li>Konforlu yaşam alanı</li>
+        <li>Dört mevsim huzurlu kullanım</li>
+    </ul>
     <div class="img-box"><img src="IMG_9352.jpeg"></div>
 
     <h3>Ofis Bölme Sistemleri</h3>
+    <ul>
+        <li>Şeffaf ve modern görünüm</li>
+        <li>Alan verimliliği sağlar</li>
+    </ul>
     <div class="img-box"><img src="IMG_9354.jpeg"></div>
 </div>
 
@@ -144,19 +171,18 @@
     <h2>Hakkımızda</h2>
     <p style="font-size:18px; line-height:1.6;">
         Çelik Cam Balkon olarak İstanbul genelinde profesyonel cam balkon montajı,
-        servis hizmeti ve orijinal yedek parça tedariki sağlıyoruz.<br>
+        bakım & onarım servis hizmeti ve orijinal yedek parça satış hizmeti sunuyoruz.<br><br>
         Kaliteli ürün, uzman işçilik ve müşteri memnuniyeti önceliğimizdir.
     </p>
 </div>
-
 <!-- ——— Yedek Parça Satış ——— -->
 <div id="yedek" class="section">
     <h2>Cam Balkon Yedek Parça Satışı</h2>
 
-    <!-- Piyasa Kolu -->
+    <!-- Kolu Kilit Sistemleri -->
     <div class="product">
-        <img src="IMG_9253.jpeg" alt="Piyasa Kolu">
-        <h3>Piyasa Kolu</h3>
+        <img src="IMG_9253.jpeg" alt="Kolu Kilit Sistemleri">
+        <h3>Kolu Kilit Sistemleri</h3>
         <p class="price-info">📞 Hemen fiyat al → WhatsApp</p>
         <p>Renk Seçenekleri</p>
         <select id="kolRenk">
@@ -266,9 +292,10 @@ function toggleMenu() {
     }
 }
 
+// WhatsApp Fonksiyonları
 function wpKol() {
     let renk = document.getElementById("kolRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Piyasa Kolu%20-%20Renk:%20${renk}`;
+    window.location.href = `https://wa.me/905050045075?text=Kolu Kilit Sistemleri%20-%20Renk:%20${renk}`;
 }
 
 function wpTeker() {
