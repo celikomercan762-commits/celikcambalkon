@@ -257,6 +257,7 @@ function toggleMenu() {
     <div class="product">
         <img src="IMG_9253.jpeg" alt="Kolu Kilit Sistemi">
         <h3>Kolu Kilit Sistemi</h3>
+        <p>Renk seçenekleri</p>
         <select id="kolRenk">
             <option>Antrasit Gri</option>
             <option>Eloksal Gümüş</option>
@@ -264,56 +265,61 @@ function toggleMenu() {
             <option>Siyah</option>
             <option>Özel Renk</option>
         </select>
-        <button class="btn" onclick="wpKol()">Sipariş Ver</button>
+        <button class="btn" onclick="wpKol()">Fiyat Al (WhatsApp)</button>
     </div>
 
     <!-- Teker Takımı -->
     <div class="product">
         <img src="IMG_9255.jpeg" alt="Teker Takımı">
         <h3>Teker Takımı</h3>
+        <p>50 Düz + 50 Kertikli</p>
         <select id="tekerAdet">
             <option>100 Adet</option>
             <option>200 Adet</option>
             <option>300 Adet</option>
         </select>
-        <button class="btn" onclick="wpTeker()">Sipariş Ver</button>
+        <button class="btn" onclick="wpTeker()">Fiyat Al (WhatsApp)</button>
     </div>
 
     <!-- Kapak Takımı -->
     <div class="product">
         <img src="IMG_9256.jpeg" alt="Kapak Takımı">
         <h3>Kapak Takımı</h3>
+        <p>50 Sağ + 50 Sol</p>
         <select id="kapakAdet">
             <option>100 Adet</option>
             <option>200 Adet</option>
             <option>300 Adet</option>
         </select>
-        <button class="btn" onclick="wpKapak()">Sipariş Ver</button>
+        <button class="btn" onclick="wpKapak()">Fiyat Al (WhatsApp)</button>
     </div>
 
     <!-- Dikme Kapak -->
     <div class="product">
         <img src="IMG_9258.jpeg" alt="Dikme Kapak">
         <h3>Dikme Kapak</h3>
+        <p>50 Sağ + 50 Sol</p>
         <select id="dikmeAdet">
             <option>100 Adet</option>
             <option>200 Adet</option>
             <option>300 Adet</option>
         </select>
-        <button class="btn" onclick="wpDikme()">Sipariş Ver</button>
+        <button class="btn" onclick="wpDikme()">Fiyat Al (WhatsApp)</button>
     </div>
 
     <!-- Alüminyum Fitil -->
     <div class="product">
         <img src="IMG_9260.jpeg" alt="Alüminyum Fitil">
         <h3>Alüminyum Fitil</h3>
-        <button class="btn" onclick="wpFitil()">Sipariş Ver</button>
+        <p>Metraj WhatsApp’tan belirlenir</p>
+        <button class="btn" onclick="wpFitil()">Fiyat Al (WhatsApp)</button>
     </div>
 
     <!-- Çift Fitil -->
     <div class="product">
         <img src="IMG_9259.jpeg" alt="Çift Fitil">
         <h3>Çift Fitil</h3>
+        <p>Renk seçenekleri</p>
         <select id="cfitilRenk">
             <option>Antrasit Gri</option>
             <option>Eloksal Gümüş</option>
@@ -321,46 +327,7 @@ function toggleMenu() {
             <option>Siyah</option>
             <option>Özel Renk</option>
         </select>
-        <button class="btn" onclick="wpCfitil()">Sipariş Ver</button>
+        <button class="btn" onclick="wpCfitil()">Fiyat Al (WhatsApp)</button>
     </div>
 
 </div>
-<!-- WhatsApp Sabit Buton -->
-<a class="wp-fab" href="https://wa.me/905050045075" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
-
-<!-- Footer -->
-<footer style="text-align:center; padding:20px; font-size:16px; color:#002855;">
-    © 2025 Çelik Cam Balkon Sistemleri — Tüm Hakları Saklıdır.
-</footer>
-
-<script>
-// Yedek Parça WhatsApp Fonksiyonları
-function wpKol() {
-    let renk = document.getElementById("kolRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Kolu Kilit Sistemi - Renk: ${renk}`;
-}
-function wpTeker() {
-    let adet = document.getElementById("tekerAdet").value;
-    window.location.href = `https://wa.me/905050045075?text=Teker Takımı - ${adet}`;
-}
-function wpKapak() {
-    let adet = document.getElementById("kapakAdet").value;
-    window.location.href = `https://wa.me/905050045075?text=Kapak Takımı - ${adet}`;
-}
-function wpDikme() {
-    let adet = document.getElementById("dikmeAdet").value;
-    window.location.href = `https://wa.me/905050045075?text=Dikme Kapak - ${adet}`;
-}
-function wpFitil() {
-    window.location.href = `https://wa.me/905050045075?text=Alüminyum Fitil Metraj Bilgisi`;
-}
-function wpCfitil() {
-    let renk = document.getElementById("cfitilRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Çift Fitil - Renk: ${renk}`;
-}
-</script>
-
-</body>
-</html>
