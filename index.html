@@ -257,30 +257,27 @@ function toggleMenu() {
     </div>
 </div>
 <!-- Çift Fitil -->
-<div class="product-card">
+<!-- Çift Fitil -->
+<div class="product">
+    <img src="IMG_9259.jpeg" alt="Çift Fitil">
     <h3>Çift Fitil</h3>
+    <p>Metraj WhatsApp'tan iletilir</p>
 
-    <img src="IMG_9259.jpeg" alt="Çift Fitil"
-        style="width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
-
-    <a href="https://wa.me/905050045075?text=Çift Fitil Siparişi"
-        class="order-btn" style="display:block; text-align:center; background:#00d600; color:white; padding:14px; font-size:18px; border-radius:10px; text-decoration:none; margin:10px 0;">
-        Sipariş Ver
-    </a>
-
-    <label for="cfitil-renk" style="font-weight:600;">Renk:</label>
-    <select id="cfitil-renk" name="cfitil-renk"
-        style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc; font-size:16px; margin-top:6px;">
-        <option value="Antrasit Gri">Antrasit Gri</option>
-        <option value="Eloksal Gümüş">Eloksal Gümüş</option>
-        <option value="Bronz">Bronz</option>
-        <option value="Siyah">Siyah</option>
-        <option value="Özel Renk">Özel Renk</option>
+    <select id="cfitilRenk">
+        <option>Antrasit Gri</option>
+        <option>Eloksal Gümüş</option>
+        <option>Bronz</option>
+        <option>Siyah</option>
+        <option>Özel Renk</option>
     </select>
-</div>
 
-<!-- WhatsApp Floating Button -->
-<a class="wp-btn" href="https://wa.me/905050045075" target="_blank">💬</a>
+    <button class="btn" onclick="wpCiftFitil()">Sipariş Ver</button>
+</div>
+function wpCiftFitil() {
+    let renk = document.getElementById("cfitilRenk").value;
+    window.location.href = `https://wa.me/905050045075?text=Çift Fitil - Renk: ${renk}`;
+}
+
 
 <!-- Footer -->
 <footer style="text-align:center; padding:20px; font-size:16px; color:#002855;">
