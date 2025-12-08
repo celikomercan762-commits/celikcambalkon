@@ -29,7 +29,6 @@
             font-size:20px; color:white; font-weight:bold;
             text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.15);
         }
-        .side-menu a:hover {background:#004a8d;}
 
         #menuOverlay {
             display:none; position:fixed;
@@ -51,6 +50,25 @@
         .img-box img {
             width:100%; border-radius:15px;
             box-shadow:0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .service-btn {
+            display:block;
+            width:100%;
+            background:#00d84a;
+            color:white;
+            padding:14px;
+            font-size:19px;
+            text-align:center;
+            margin-top:12px;
+            border-radius:14px;
+            text-decoration:none;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.2s;
+        }
+        .service-btn:hover {
+            background:#00c041;
         }
 
         .product {
@@ -86,16 +104,15 @@
             background:#00d84a; color:white;
             font-size:20px; border-radius:14px;
             border:none; font-weight:bold;
-            cursor:pointer; transition:0.2s;
+            cursor:pointer;
         }
-        .btn:hover {background:#00bf3f;}
 
         .wp-fab {
             position:fixed; bottom:22px; right:22px;
             background:#25D366; width:62px; height:62px;
             border-radius:50%; display:flex;
             justify-content:center; align-items:center;
-            cursor:pointer; z-index:9999; box-shadow:0 3px 10px rgba(0,0,0,0.25);
+            cursor:pointer; z-index:9999;
         }
         .wp-fab img {width:38px;}
     </style>
@@ -116,6 +133,7 @@
 </div>
 
 <div id="menuOverlay" onclick="toggleMenu()"></div>
+
 <!-- ——— Hizmetlerimiz ——— -->
 <div id="hizmetler" class="section">
     <h2>Hizmetlerimiz</h2>
@@ -128,6 +146,7 @@
         <li>Dört mevsim kullanım özelliği</li>
     </ul>
     <div class="img-box"><img src="IMG_9348.jpeg"></div>
+    <a class="service-btn" onclick="wpCamBalkon()">📞 m² Fiyat Al → WhatsApp</a>
 
     <h3>Sürgülü Cam Sistemleri</h3>
     <ul>
@@ -136,6 +155,7 @@
         <li>Modern ve estetik tasarım</li>
     </ul>
     <div class="img-box"><img src="IMG_9351.jpeg"></div>
+    <a class="service-btn" onclick="wpSurgulu()">📞 m² Fiyat Al → WhatsApp</a>
 
     <h3>Katlanır Cam Sistemleri</h3>
     <ul>
@@ -143,13 +163,14 @@
         <li>Mükemmel izolasyon</li>
     </ul>
     <div class="img-box"><img src="IMG_9350.jpeg"></div>
-
-    <h3>Giyotin Cam Sistemleri</h3>
+    <a class="service-btn" onclick="wpKatlanir()">📞 m² Fiyat Al → WhatsApp</a>
+        <h3>Giyotin Cam Sistemleri</h3>
     <ul>
         <li>Motorlu kontrol sistemi</li>
         <li>Güvenli ve konforlu kullanım</li>
     </ul>
     <div class="img-box"><img src="IMG_9349.jpeg"></div>
+    <a class="service-btn" onclick="wpGiyotin()">📞 m² Fiyat Al → WhatsApp</a>
 
     <h3>Kış Bahçesi Sistemleri</h3>
     <ul>
@@ -157,6 +178,7 @@
         <li>Dört mevsim huzurlu kullanım</li>
     </ul>
     <div class="img-box"><img src="IMG_9352.jpeg"></div>
+    <a class="service-btn" onclick="wpKisBahcesi()">📞 m² Fiyat Al → WhatsApp</a>
 
     <h3>Ofis Bölme Sistemleri</h3>
     <ul>
@@ -164,6 +186,7 @@
         <li>Alan verimliliği sağlar</li>
     </ul>
     <div class="img-box"><img src="IMG_9354.jpeg"></div>
+    <a class="service-btn" onclick="wpOfis()">📞 m² Fiyat Al → WhatsApp</a>
 </div>
 
 <!-- ——— Hakkımızda ——— -->
@@ -268,15 +291,16 @@
         </select>
         <button class="btn" onclick="wpCiftFitil()">Sipariş Ver</button>
     </div>
+
 </div>
 <!-- WhatsApp Floating Button -->
 <a class="wp-fab" href="https://wa.me/905050045075" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 <!-- Footer -->
 <footer style="text-align:center; padding:20px; font-size:16px; color:#002855;">
-    © 2025 Çelik Cam Balkon Sistemleri — Tüm Hakları Saklıdır
+    © 2025 Çelik Cam Balkon Sistemleri — Tüm Hakları Saklıdır.
 </footer>
 
 <script>
@@ -292,35 +316,50 @@ function toggleMenu() {
     }
 }
 
-// WhatsApp Fonksiyonları
+// Hizmetler WhatsApp Fonksiyonları
+function wpCamBalkon() {
+    window.location.href = `https://wa.me/905050045075?text=Cam Balkon Sistemleri%20m²%20fiyatı%20istiyorum.`;
+}
+function wpSurgulu() {
+    window.location.href = `https://wa.me/905050045075?text=Sürgülü Cam Sistemleri%20m²%20fiyatı%20istiyorum.`;
+}
+function wpKatlanir() {
+    window.location.href = `https://wa.me/905050045075?text=Katlanır Cam Sistemleri%20m²%20fiyatı%20istiyorum.`;
+}
+function wpGiyotin() {
+    window.location.href = `https://wa.me/905050045075?text=Giyotin Cam Sistemleri%20m²%20fiyatı%20istiyorum.`;
+}
+function wpKisBahcesi() {
+    window.location.href = `https://wa.me/905050045075?text=Kış Bahçesi%20m²%20fiyatı%20istiyorum.`;
+}
+function wpOfis() {
+    window.location.href = `https://wa.me/905050045075?text=Ofis Bölme Sistemleri%20m²%20fiyatı%20istiyorum.`;
+}
+
+// Yedek Parça WhatsApp Fonksiyonları
 function wpKol() {
     let renk = document.getElementById("kolRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Kolu Kilit Sistemleri%20-%20Renk:%20${renk}`;
+    window.location.href = `https://wa.me/905050045075?text=Kolu Kilit Sistemleri - Renk: ${renk}`;
 }
-
 function wpTeker() {
     let adet = document.getElementById("tekerAdet").value;
-    window.location.href = `https://wa.me/905050045075?text=Teker Takımı%20-%20${adet}`;
+    window.location.href = `https://wa.me/905050045075?text=Teker Takımı - ${adet}`;
 }
-
 function wpKapak() {
     let adet = document.getElementById("kapakAdet").value;
-    window.location.href = `https://wa.me/905050045075?text=Kapak Takımı%20-%20${adet}`;
+    window.location.href = `https://wa.me/905050045075?text=Kapak Takımı - ${adet}`;
 }
-
 function wpDikme() {
     let adet = document.getElementById("dikmeAdet").value;
-    window.location.href = `https://wa.me/905050045075?text=Dikme Kapak%20-%20${adet}`;
+    window.location.href = `https://wa.me/905050045075?text=Dikme Kapak - ${adet}`;
 }
-
 function wpFitil() {
     let renk = document.getElementById("fitilRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Alüminyum Fitil%20-%20Renk:%20${renk}`;
+    window.location.href = `https://wa.me/905050045075?text=Alüminyum Fitil - Renk: ${renk} - Metraj Belirtin`;
 }
-
 function wpCiftFitil() {
     let renk = document.getElementById("cfitilRenk").value;
-    window.location.href = `https://wa.me/905050045075?text=Çift Fitil%20-%20Renk:%20${renk}`;
+    window.location.href = `https://wa.me/905050045075?text=Çift Fitil - Renk: ${renk} - Metraj Belirtin`;
 }
 </script>
 
