@@ -1,328 +1,105 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çelik Cam Balkon Sistemleri</title>
-
-    <style>
-        body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f7fa; color: #0a2a43;}
-
-        header {text-align: center; background: white; padding: 20px 0; position: relative;}
-        header img {width: 160px;}
-
-        .menu-btn {
-            position: absolute; left: 18px; top: 28px;
-            font-size: 32px; color: #002855; cursor: pointer;
-        }
-
-        .side-menu {
-            position: fixed; top: 0; left: -260px;
-            width: 260px; height: 100%;
-            background: #002855; transition: 0.3s ease;
-            padding-top: 100px; z-index: 9999;
-        }
-        .side-menu a {
-            display: block; padding: 20px 25px;
-            font-size: 20px; color: white;
-            text-decoration: none;
-        }
-        .side-menu a:hover {background: rgba(255,255,255,0.1);}
-
-        #menuOverlay {
-            display: none;
-            position: fixed; top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.2);
-            z-index: 999;
-        }
-
-        .section {background: white; margin: 20px; padding: 25px; border-radius: 20px;}
-
-        h2 {font-size: 28px; text-align: center; color: #002855; margin-bottom: 25px;}
-        h3 {color: #002855;}
-
-        ul {font-size: 18px; line-height: 1.6; padding-left: 18px;}
-
-        .order-btn {
-            width: 100%;
-            background: #00c000;
-            color: white;
-            font-size: 17px;
-            border-radius: 10px;
-            padding: 12px;
-            display: block;
-            text-align: center;
-            text-decoration: none;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        /* SABİT WHATSAPP */
-        .wp-fab {
-            position: fixed; bottom: 22px; right: 22px;
-            background: #25D366; width: 65px; height: 65px;
-            border-radius: 50%; display: flex;
-            justify-content: center; align-items: center;
-            cursor: pointer; z-index: 99999;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-        }
-        .wp-fab img {width: 38px;}
-
-        /* 📌 SADECE PC TASARIMI */
-        @media (min-width: 900px) {
-
-            #hizmetler {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 25px;
-                padding: 10px;
-            }
-
-            .service-item {
-                background: #ffffff;
-                border-radius: 18px;
-                padding: 15px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-                transition: transform 0.25s, box-shadow 0.25s;
-            }
-
-            .service-item:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            }
-
-            .service-item img {
-                width: 100%;
-                height: 260px;
-                object-fit: cover;
-                border-radius: 14px;
-                margin-bottom: 12px;
-            }
-
-            .service-item ul {padding-left: 20px;}
-            .order-btn {width: 90%; margin: 12px auto 0;}
-        }
-    </style>
-
-</head>
-
-<body>
-
-<header>
-    <span class="menu-btn" onclick="toggleMenu()">☰</span>
-    <img src="logo.PNG" alt="Logo">
-</header>
-
-<div class="side-menu" id="sideMenu">
-    <a href="#hizmetler">Hizmetlerimiz</a>
-    <a href="#hakkimizda">Hakkımızda</a>
-    <a href="#yedek">Yedek Parça</a>
-    <a href="https://wa.me/905050045075">WhatsApp</a>
-</div>
-<div id="menuOverlay" onclick="toggleMenu()"></div>
-
-<script>
-function toggleMenu() {
-    let menu = document.getElementById("sideMenu");
-    let overlay = document.getElementById("menuOverlay");
-    if (menu.style.left === "0px") {
-        menu.style.left = "-260px";
-        overlay.style.display = "none";
-    } else {
-        menu.style.left = "0px";
-        overlay.style.display = "block";
-    }
-}
-</script>
-
-
-<!-- ⭐ HİZMETLER -->
-<div id="hizmetler" class="section">
-    <h2>Hizmetlerimiz</h2>
-
-    <div class="service-item">
-        <h3>Cam Balkon Sistemleri</h3>
-        <ul><li>Panoramik şeffaf görünüm</li><li>Kolay temizlenebilir sistem</li><li>Dayanıklı, uzun ömürlü yapı</li><li>Dört mevsim kullanım</li></ul>
-        <img src="IMG_9348.jpeg">
-        <a class="order-btn" href="https://wa.me/905050045075?text=Cam Balkon Sistemleri için fiyat">
-            Fiyat Al (WhatsApp)
-        </a>
-    </div>
-
-    <div class="service-item">
-        <h3>Sürgülü Cam Sistemleri</h3>
-        <ul><li>Geniş alanlara uygun</li><li>Kolay hareket kabiliyeti</li><li>Modern tasarım</li></ul>
-        <img src="IMG_9351.jpeg">
-        <a class="order-btn" href="https://wa.me/905050045075?text=Sürgülü Cam Sistemleri için fiyat">
-            Fiyat Al (WhatsApp)
-        </a>
-    </div>
-
-    <div class="service-item">
-        <h3>Katlanır Cam Sistemleri</h3>
-        <ul><li>Tam açılabilir yapı</li><li>Üstün izolasyon</li></ul>
-        <img src="IMG_9350.jpeg">
-        <a class="order-btn" href="https://wa.me/905050045075?text=Katlanır Cam Sistemleri için fiyat">
-            Fiyat Al (WhatsApp)
-        </a>
-    </div>
-
-    <div class="service-item">
-        <h3>Giyotin Cam Sistemleri</h3>
-        <ul><li>Motorlu kontrol</li><li>Güvenli modern çözüm</li></ul>
-        <img src="IMG_9349.jpeg">
-        <a class="order-btn" href="https://wa.me/905050045075?text=Giyotin Cam Sistemleri için fiyat">
-            Fiyat Al (WhatsApp)
-        </a>
-    </div>
-
-    <div class="service-item">
-        <h3>Kış Bahçesi Sistemleri</h3>
-        <ul><li>Dört mevsim kullanım</li><li>Yaşam alanı konforu</li></ul>
-        <img src="IMG_9352.jpeg">
-        <a class="order-btn" href="https://wa.me/905050045075?text=Kış Bahçesi için fiyat">
-            Fiyat Al (WhatsApp)
-        </a>
-    </div>
-
-    <div class="service-item">
-        <h3>Ofis Bölme Sistemleri</h3>
-        <ul><li>Şeffaf modern görünüm</li><li>Maksimum alan</li></ul>
-        <img src="IMG_9354.jpeg">
-        <a class="order-btn" href="https://wa.me/905050045075?text=Ofis Bölme için fiyat">
-            Fiyat Al (WhatsApp)
-        </a>
-    </div>
-
-    <div class="service-item">
-        <h3>Alüminyum Doğrama Sistemleri</h3>
-        <ul><li>Dayanıklı yapı</li><li>Isı yalıtımı</li></ul>
-        <img src="IMG_9353.jpeg">
-        <a class="order-btn" href="https://wa.me/905050045075?text=Alüminyum Doğrama için fiyat">
-            Fiyat Al (WhatsApp)
-        </a>
-    </div>
-
-</div>
-
-
-<!-- ⭐ HAKKIMIZDA -->
-<div id="hakkimizda" class="section">
-    <h2>Hakkımızda</h2>
-    <p>Çelik Cam Balkon olarak İstanbul genelinde profesyonel cam balkon uygulamaları, servis hizmeti ve orijinal yedek parça tedariki sağlıyoruz.</p>
-</div>
-
-    <!-- ——— Yedek Parça Satış ——— -->
-<div id="yedek" class="section">
-    <h2>Cam Balkon Yedek Parça Satışı</h2>
-
-    <div class="yedek-grid">
-
-        <div class="yedek-item">
-            <img src="IMG_9253.jpeg" alt="Kolu Kilit Sistemi">
-            <h3>Kolu Kilit Sistemi</h3>
-            <p>Renk seçenekleri:</p>
-            <select id="kolRenk">
-                <option>Antrasit Gri</option>
-                <option>Eloksal Gümüş</option>
-                <option>Bronz</option>
-                <option>Siyah</option>
-                <option>Özel Renk</option>
-            </select>
-            <button class="btn" onclick="wpKol()">Fiyat Al (WhatsApp)</button>
-        </div>
-
-        <div class="yedek-item">
-            <img src="IMG_9255.jpeg" alt="Teker Takımı">
-            <h3>Teker Takımı</h3>
-            <p>50 Düz + 50 Kertikli</p>
-            <select id="tekerAdet">
-                <option>100 Adet</option>
-                <option>200 Adet</option>
-                <option>300 Adet</option>
-            </select>
-            <button class="btn" onclick="wpTeker()">Fiyat Al (WhatsApp)</button>
-        </div>
-
-        <div class="yedek-item">
-            <img src="IMG_9256.jpeg" alt="Kapak Takımı">
-            <h3>Kapak Takımı</h3>
-            <p>50 Sağ + 50 Sol</p>
-            <select id="kapakAdet">
-                <option>100 Adet</option>
-                <option>200 Adet</option>
-                <option>300 Adet</option>
-            </select>
-            <button class="btn" onclick="wpKapak()">Fiyat Al (WhatsApp)</button>
-        </div>
-
-        <div class="yedek-item">
-            <img src="IMG_9258.jpeg" alt="Dikme Kapak">
-            <h3>Dikme Kapak</h3>
-            <p>50 Sağ + 50 Sol</p>
-            <select id="dikmeAdet">
-                <option>100 Adet</option>
-                <option>200 Adet</option>
-                <option>300 Adet</option>
-            </select>
-            <button class="btn" onclick="wpDikme()">Fiyat Al (WhatsApp)</button>
-        </div>
-
-        <div class="yedek-item">
-            <img src="IMG_9260.jpeg" alt="Alüminyum Fitil">
-            <h3>Alüminyum Fitil</h3>
-            <p>Metraj seçimi WhatsApp'ta yapılır</p>
-            <button class="btn" onclick="wpFitil()">Fiyat Al (WhatsApp)</button>
-        </div>
-
-        <div class="yedek-item">
-            <img src="IMG_9259.jpeg" alt="Çift Fitil">
-            <h3>Çift Fitil</h3>
-            <p>Renk seçenekleri:</p>
-            <select id="cfitilRenk">
-                <option>Antrasit Gri</option>
-                <option>Eloksal Gümüş</option>
-                <option>Bronz</option>
-                <option>Siyah</option>
-                <option>Özel Renk</option>
-            </select>
-            <button class="btn" onclick="wpCfitil()">Fiyat Al (WhatsApp)</button>
-        </div>
-
-    </div>
-
-</div>
-    @media (min-width: 900px) {
-
-    .yedek-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-        padding: 10px;
-    }
-
-    .yedek-item {
-        background: #ffffff;
-        border-radius: 18px;
-        padding: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: transform 0.25s, box-shadow 0.25s;
-    }
-
-    .yedek-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-    }
-
-    .yedek-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 14px;
-        margin-bottom: 12px;
-    }
+/* Yedek Parça Kart Tasarımı */
+.parts-section {
+    padding: 40px 0;
+    background: #f4f7fc;
 }
 
+.parts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 0 20px;
+}
 
-    <!-- ——— Yedek Parça Satış ——— -->
+.part-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.part-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.part-card h4 {
+    font-size: 18px;
+    margin: 12px 0 8px;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #25D366;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Telefon uyumu */
+@media(max-width: 768px) {
+    .parts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .part-card img {
+        height: 120px;
+    }
+}
+<section id="yed" class="parts-section">
+    <h2>Yedek Parça Satışı</h2>
+
+    <div class="parts-grid">
+
+        <!-- Kolu Kilit Sistemi -->
+        <div class="part-card">
+            <img src="IMG_0001.jpeg" alt="Kolu Kilit Sistemi">
+            <h4>Kolu Kilit Sistemi</h4>
+            <a class="whatsapp-btn" href="https://wa.me/905050045075?text=Kolu%20Kilit%20Sistemi%20fiyat%20almak%20istiyorum">Fiyat Al</a>
+        </div>
+
+        <!-- Tek Fitil -->
+        <div class="part-card">
+            <img src="IMG_0002.jpeg" alt="Tek Fitil">
+            <h4>Tek Fitil</h4>
+            <a class="whatsapp-btn" href="https://wa.me/905050045075?text=Tek%20Fitil%20fiyat%20almak%20istiyorum">Fiyat Al</a>
+        </div>
+
+        <!-- Çift Fitil -->
+        <div class="part-card">
+            <img src="IMG_0003.jpeg" alt="Çift Fitil">
+            <h4>Çift Fitil</h4>
+            <a class="whatsapp-btn" href="https://wa.me/905050045075?text=%C3%87ift%20Fitil%20fiyat%20almak%20istiyorum">Fiyat Al</a>
+        </div>
+
+        <!-- Kapak Takımı -->
+        <div class="part-card">
+            <img src="IMG_0004.jpeg" alt="Kapak Takımı">
+            <h4>Kapak Takımı</h4>
+            <a class="whatsapp-btn" href="https://wa.me/905050045075?text=Kapak%20Tak%C4%B1m%C4%B1%20fiyat%20almak%20istiyorum">Fiyat Al</a>
+        </div>
+
+        <!-- Dikme Kapağı -->
+        <div class="part-card">
+            <img src="IMG_0005.jpeg" alt="Dikme Kapağı">
+            <h4>Dikme Kapağı</h4>
+            <a class="whatsapp-btn" href="https://wa.me/905050045075?text=Dikme%20Kapa%C4%9F%C4%B1%20fiyat%20almak%20istiyorum">Fiyat Al</a>
+        </div>
+
+        <!-- Teker Seti -->
+        <div class="part-card">
+            <img src="IMG_0006.jpeg" alt="Teker Seti">
+            <h4>Teker Seti</h4>
+            <a class="whatsapp-btn" href="https://wa.me/905050045075?text=Teker%20Seti%20fiyat%20almak%20istiyorum">Fiyat Al</a>
+        </div>
+
+    </div>
+</section>
+
+
