@@ -212,36 +212,88 @@ function toggleMenu() {
     <h2>Hakkımızda</h2>
     <p>Çelik Cam Balkon olarak İstanbul genelinde profesyonel cam balkon uygulamaları, servis hizmeti ve orijinal yedek parça tedariki sağlıyoruz.</p>
 </div>
-
-
-<!-- ⭐ YEDEK PARÇA -->
+    <!-- ——— Yedek Parça Satış ——— -->
 <div id="yedek" class="section">
-    <h2>Yedek Parça Satışı</h2>
+    <h2>Cam Balkon Yedek Parça Satışı</h2>
 
+    <!-- Kolu Kilit Sistemi -->
     <div class="product">
-        <img src="IMG_9253.jpeg">
+        <img src="IMG_9253.jpeg" alt="Kolu Kilit Sistemi">
         <h3>Kolu Kilit Sistemi</h3>
-        <select><option>Antrasit</option><option>Gümüş</option><option>Bronz</option><option>Siyah</option></select>
-        <button class="btn" onclick="wpKol()">Fiyat Al</button>
+        <p>Renk seçenekleri</p>
+        <select id="kolRenk">
+            <option>Antrasit Gri</option>
+            <option>Eloksal Gümüş</option>
+            <option>Bronz</option>
+            <option>Siyah</option>
+            <option>Özel Renk</option>
+        </select>
+        <button class="btn" onclick="wpKol()">Fiyat Al (WhatsApp)</button>
     </div>
 
+    <!-- Teker Takımı -->
     <div class="product">
-        <img src="IMG_9255.jpeg">
+        <img src="IMG_9255.jpeg" alt="Teker Takımı">
         <h3>Teker Takımı</h3>
-        <select><option>100 Adet</option><option>200 Adet</option></select>
-        <button class="btn" onclick="wpTeker()">Fiyat Al</button>
+        <p>50 Düz + 50 Kertikli</p>
+        <select id="tekerAdet">
+            <option>100 Adet</option>
+            <option>200 Adet</option>
+            <option>300 Adet</option>
+        </select>
+        <button class="btn" onclick="wpTeker()">Fiyat Al (WhatsApp)</button>
+    </div>
+
+    <!-- Kapak Takımı -->
+    <div class="product">
+        <img src="IMG_9256.jpeg" alt="Kapak Takımı">
+        <h3>Kapak Takımı</h3>
+        <p>50 Sağ + 50 Sol</p>
+        <select id="kapakAdet">
+            <option>100 Adet</option>
+            <option>200 Adet</option>
+            <option>300 Adet</option>
+        </select>
+        <button class="btn" onclick="wpKapak()">Fiyat Al (WhatsApp)</button>
+    </div>
+
+    <!-- Dikme Kapak -->
+    <div class="product">
+        <img src="IMG_9258.jpeg" alt="Dikme Kapak">
+        <h3>Dikme Kapak</h3>
+        <p>50 Sağ + 50 Sol</p>
+        <select id="dikmeAdet">
+            <option>100 Adet</option>
+            <option>200 Adet</option>
+            <option>300 Adet</option>
+        </select>
+        <button class="btn" onclick="wpDikme()">Fiyat Al (WhatsApp)</button>
+    </div>
+
+    <!-- Alüminyum Fitil -->
+    <div class="product">
+        <img src="IMG_9260.jpeg" alt="Alüminyum Fitil">
+        <h3>Alüminyum Fitil</h3>
+        <p>Metraj WhatsApp’tan belirlenir</p>
+        <button class="btn" onclick="wpFitil()">Fiyat Al (WhatsApp)</button>
+    </div>
+
+    <!-- Çift Fitil -->
+    <div class="product">
+        <img src="IMG_9259.jpeg" alt="Çift Fitil">
+        <h3>Çift Fitil</h3>
+        <p>Renk seçenekleri</p>
+        <select id="cfitilRenk">
+            <option>Antrasit Gri</option>
+            <option>Eloksal Gümüş</option>
+            <option>Bronz</option>
+            <option>Siyah</option>
+            <option>Özel Renk</option>
+        </select>
+        <button class="btn" onclick="wpCfitil()">Fiyat Al (WhatsApp)</button>
     </div>
 
 </div>
 
 
-<script>
-function wpKol(){window.location.href="https://wa.me/905050045075?text=Kilit fiyat";}
-function wpTeker(){window.location.href="https://wa.me/905050045075?text=Teker fiyat";}
-</script>
 
-<a class="wp-fab" href="https://wa.me/905050045075">
-<img src="whatsapp.png"></a>
-
-</body>
-</html>
