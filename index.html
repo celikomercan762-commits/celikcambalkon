@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +68,7 @@
             z-index: 999;
         }
 
-        /* GENEL SECTIONS */
+        /* GENEL SECTION */
         .section {
             background: white;
             margin: 100px 20px 20px 20px;
@@ -81,15 +83,13 @@
             margin-bottom: 20px;
         }
 
-        /* HİZMETLER — KART SİSTEMİ */
+        /* HİZMETLER KARTLARI */
         .services-grid {
             display: grid;
             gap: 20px;
         }
         @media(min-width: 900px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
         }
         .service-card {
             background: white;
@@ -121,16 +121,15 @@
             text-decoration: none;
         }
 
-        /* YEDEK PARÇA — MODERN KART SİSTEMİ */
+        /* YEDEK PARÇA KARTLARI */
         .parts-grid {
             display: grid;
             gap: 20px;
         }
         @media(min-width: 900px) {
-            .parts-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .parts-grid { grid-template-columns: repeat(3, 1fr); }
         }
+
         .part-card {
             background: white;
             border-radius: 16px;
@@ -178,11 +177,24 @@
             box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
             z-index: 9999;
         }
-        .wp-fab img {
-            width: 35px;
-        }
+        .wp-fab img { width: 35px; }
     </style>
 </head>
+<body>
+
+<header>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    <img src="logo.PNG" alt="Logo">
+</header>
+
+<div class="side-menu" id="sideMenu">
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#yedekparca">Yedek Parça</a>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="https://wa.me/905050045075">WhatsApp</a>
+</div>
+
+<div id="menuOverlay" onclick="toggleMenu()"></div>
 <!-- =================== HİZMETLER =================== -->
 <div id="hizmetler" class="section">
     <h2>Hizmetlerimiz</h2>
@@ -198,49 +210,49 @@
                 <li>Kolay temizlenebilir sistem</li>
                 <li>Dört mevsim kullanım</li>
             </ul>
-            <a class="order-btn"
-               href="https://wa.me/905050045075?text=Cam Balkon Sistemleri m² fiyat bilgisi almak istiyorum">
-            m² Fiyat Al (WhatsApp)</a>
+            <a class="order-btn" href="https://wa.me/905050045075?text=Cam Balkon Sistemleri m² fiyat bilgisi almak istiyorum">
+                m² Fiyat Al (WhatsApp)
+            </a>
         </div>
 
-        <!-- Sürgülü Sistem -->
+        <!-- Sürgülü -->
         <div class="service-card">
-            <img src="IMG_9351.jpeg" alt="Sürgülü Sistem">
+            <img src="IMG_9351.jpeg" alt="Sürgülü Cam">
             <h3>Sürgülü Cam Sistemleri</h3>
             <ul>
-                <li>Geniş alanlar için ideal kullanım</li>
-                <li>Kolay hareket kabiliyeti</li>
-                <li>Modern şık görünüm</li>
+                <li>Geniş alanlar için ideal</li>
+                <li>Kolay kullanım</li>
+                <li>Şık modern tasarım</li>
             </ul>
-            <a class="order-btn"
-               href="https://wa.me/905050045075?text=Sürgülü Cam Sistemleri m² fiyat bilgisi almak istiyorum">
-            m² Fiyat Al (WhatsApp)</a>
+            <a class="order-btn" href="https://wa.me/905050045075?text=Sürgülü Cam Sistemleri m² fiyat bilgisi almak istiyorum">
+                m² Fiyat Al (WhatsApp)
+            </a>
         </div>
 
-        <!-- Katlanır Sistem -->
+        <!-- Katlanır -->
         <div class="service-card">
-            <img src="IMG_9350.jpeg" alt="Katlanır Sistem">
+            <img src="IMG_9350.jpeg" alt="Katlanır Cam">
             <h3>Katlanır Cam Sistemleri</h3>
             <ul>
                 <li>Tam açılabilir panel yapısı</li>
                 <li>Güçlü izolasyon</li>
             </ul>
-            <a class="order-btn"
-               href="https://wa.me/905050045075?text=Katlanır Cam Sistemleri m² fiyat bilgisi almak istiyorum">
-            m² Fiyat Al (WhatsApp)</a>
+            <a class="order-btn" href="https://wa.me/905050045075?text=Katlanır Cam Sistemleri m² fiyat bilgisi almak istiyorum">
+                m² Fiyat Al (WhatsApp)
+            </a>
         </div>
 
-        <!-- Giyotin Sistem -->
+        <!-- Giyotin -->
         <div class="service-card">
             <img src="IMG_9349.jpeg" alt="Giyotin Sistem">
             <h3>Giyotin Cam Sistemleri</h3>
             <ul>
                 <li>Motorlu kontrollü kullanım</li>
-                <li>Modern ve güvenli çözüm</li>
+                <li>Modern ve güvenli yapı</li>
             </ul>
-            <a class="order-btn"
-               href="https://wa.me/905050045075?text=Giyotin Cam Sistemleri m² fiyat bilgisi almak istiyorum">
-            m² Fiyat Al (WhatsApp)</a>
+            <a class="order-btn" href="https://wa.me/905050045075?text=Giyotin Cam Sistemleri m² fiyat bilgisi almak istiyorum">
+                m² Fiyat Al (WhatsApp)
+            </a>
         </div>
 
         <!-- Kış Bahçesi -->
@@ -251,9 +263,9 @@
                 <li>Konforlu kullanım alanı</li>
                 <li>Şık tasarım</li>
             </ul>
-            <a class="order-btn"
-               href="https://wa.me/905050045075?text=Kış Bahçesi Sistemleri m² fiyat bilgisi almak istiyorum">
-            m² Fiyat Al (WhatsApp)</a>
+            <a class="order-btn" href="https://wa.me/905050045075?text=Kış Bahçesi Sistemleri m² fiyat bilgisi almak istiyorum">
+                m² Fiyat Al (WhatsApp)
+            </a>
         </div>
 
         <!-- Ofis Bölme -->
@@ -264,9 +276,9 @@
                 <li>Modern şeffaf görünüm</li>
                 <li>Alan verimliliği sağlar</li>
             </ul>
-            <a class="order-btn"
-               href="https://wa.me/905050045075?text=Ofis Bölme Sistemleri m² fiyat bilgisi almak istiyorum">
-            m² Fiyat Al (WhatsApp)</a>
+            <a class="order-btn" href="https://wa.me/905050045075?text=Ofis Bölme Sistemleri m² fiyat bilgisi almak istiyorum">
+                m² Fiyat Al (WhatsApp)
+            </a>
         </div>
 
         <!-- Alüminyum Doğrama -->
@@ -275,22 +287,27 @@
             <h3>Alüminyum Doğrama Sistemleri</h3>
             <ul>
                 <li>Uzun ömürlü kullanım</li>
-                <li>Isı yalıtımlı güçlü yapı</li>
+                <li>Isı yalıtımlı yapı</li>
             </ul>
-            <a class="order-btn"
-               href="https://wa.me/905050045075?text=Alüminyum Doğrama Sistemleri m² fiyat bilgisi almak istiyorum">
-            m² Fiyat Al (WhatsApp)</a>
+            <a class="order-btn" href="https://wa.me/905050045075?text=Alüminyum Doğrama Sistemleri m² fiyat bilgisi almak istiyorum">
+                m² Fiyat Al (WhatsApp)
+            </a>
         </div>
 
     </div>
 </div>
-<!-- =================== YEDEK PARÇA =================== -->
+    <!-- =================== YEDEK PARÇA ANA BAŞLIK =================== -->
+<h2 id="yedekparca" style="text-align:center; font-size:32px; color:#003366; margin-top:40px;">
+    Yedek Parça
+</h2>
+
+<!-- =================== YEDEK PARÇA BÖLÜMÜ =================== -->
 <div id="yedek" class="section">
     <h2>Cam Balkon Yedek Parça Satışı</h2>
 
     <div class="parts-grid">
 
-        <!-- KOLU KİLİT SİSTEMİ -->
+        <!-- Kolu Kilit Sistemi -->
         <div class="part-card">
             <img src="IMG_9253.jpeg" alt="Kolu Kilit Sistemi">
             <h3>Kolu Kilit Sistemi</h3>
@@ -303,12 +320,13 @@
                 <option>Özel Renk</option>
             </select>
 
-            <a class="wp-btn" href="https://wa.me/905050045075?text=Kolu Kilit Sistemi fiyat bilgisi almak istiyorum">
-                Fiyat Al (WhatsApp)
+            <a class="wp-btn" 
+               href="https://wa.me/905050045075?text=Kolu Kilit Sistemi fiyat bilgisi almak istiyorum">
+               Fiyat Al (WhatsApp)
             </a>
         </div>
 
-        <!-- TEKER SETİ -->
+        <!-- Teker Seti -->
         <div class="part-card">
             <img src="IMG_9255.jpeg" alt="Teker Seti">
             <h3>Teker Seti (50 Düz + 50 Kertikli)</h3>
@@ -319,12 +337,13 @@
                 <option>300 Adet</option>
             </select>
 
-            <a class="wp-btn" href="https://wa.me/905050045075?text=Teker Seti fiyat bilgisi almak istiyorum">
-                Fiyat Al (WhatsApp)
+            <a class="wp-btn"
+               href="https://wa.me/905050045075?text=Teker Seti fiyat bilgisi almak istiyorum">
+               Fiyat Al (WhatsApp)
             </a>
         </div>
 
-        <!-- KAPAK TAKIMI -->
+        <!-- Kapak Takımı -->
         <div class="part-card">
             <img src="IMG_9256.jpeg" alt="Kapak Takımı">
             <h3>Kapak Takımı (50 Sağ + 50 Sol)</h3>
@@ -335,12 +354,13 @@
                 <option>300 Adet</option>
             </select>
 
-            <a class="wp-btn" href="https://wa.me/905050045075?text=Kapak Takımı fiyat bilgisi almak istiyorum">
-                Fiyat Al (WhatsApp)
+            <a class="wp-btn"
+               href="https://wa.me/905050045075?text=Kapak Takımı fiyat bilgisi almak istiyorum">
+               Fiyat Al (WhatsApp)
             </a>
         </div>
 
-        <!-- DİKME KAPAĞI -->
+        <!-- Dikme Kapağı -->
         <div class="part-card">
             <img src="IMG_9258.jpeg" alt="Dikme Kapağı">
             <h3>Dikme Kapağı</h3>
@@ -351,24 +371,26 @@
                 <option>300 Adet</option>
             </select>
 
-            <a class="wp-btn" href="https://wa.me/905050045075?text=Dikme Kapağı fiyat bilgisi almak istiyorum">
-                Fiyat Al (WhatsApp)
+            <a class="wp-btn"
+               href="https://wa.me/905050045075?text=Dikme Kapağı fiyat bilgisi almak istiyorum">
+               Fiyat Al (WhatsApp)
             </a>
         </div>
 
-        <!-- ALÜMİNYUM FİTİL -->
+        <!-- Alüminyum Fitil -->
         <div class="part-card">
             <img src="IMG_9260.jpeg" alt="Alüminyum Fitil">
             <h3>Alüminyum Fitil</h3>
 
-            <a class="wp-btn" href="https://wa.me/905050045075?text=Alüminyum Fitil fiyat bilgisi almak istiyorum">
-                Fiyat Al (WhatsApp)
+            <a class="wp-btn"
+               href="https://wa.me/905050045075?text=Alüminyum Fitil fiyat bilgisi almak istiyorum">
+               Fiyat Al (WhatsApp)
             </a>
         </div>
 
-        <!-- ÇİFT FİTİL -->
+        <!-- Çift Fitil (Fotoğraf Düzeltilmiş) -->
         <div class="part-card">
-            <img src="IMG_9262.jpeg" alt="Çift Fitil">
+            <img src="IMG_9259.jpeg" alt="Çift Fitil">
             <h3>Çift Fitil</h3>
 
             <select id="cfitilRenk">
@@ -379,8 +401,9 @@
                 <option>Özel Renk</option>
             </select>
 
-            <a class="wp-btn" href="https://wa.me/905050045075?text=Çift Fitil fiyat bilgisi almak istiyorum">
-                Fiyat Al (WhatsApp)
+            <a class="wp-btn"
+               href="https://wa.me/905050045075?text=Çift Fitil fiyat bilgisi almak istiyorum">
+               Fiyat Al (WhatsApp)
             </a>
         </div>
 
@@ -392,25 +415,27 @@
     <p>
         Çelik Cam Balkon olarak İstanbul genelinde profesyonel cam balkon montajı,
         servis hizmeti ve orijinal yedek parça tedariki sağlıyoruz.
-        Müşteri memnuniyeti, kaliteli işçilik ve sağlam malzeme en büyük önceliğimizdir.
+        Kaliteli işçilik ve müşteri memnuniyeti en büyük önceliğimizdir.
     </p>
 </div>
 
 <!-- =================== FOOTER =================== -->
-<footer style="background:#003366; color:white; padding:20px; text-align:center; margin-top:40px;">
-    <h3>İletişim Bilgileri</h3>
+<footer style="background:#003366; color:white; padding:25px; text-align:center; margin-top:40px;">
+
+    <h3 style="margin-bottom:10px;">İletişim Bilgileri</h3>
 
     <p><strong>Adres:</strong><br>
     Yunusemre Mahallesi, 1410/ Sokak No:2<br>
     Sultançiftliği – İstanbul / Türkiye</p>
 
-    <p><strong>Telefon:</strong> 0505 004 50 75</p>
+    <p><strong>Telefon:</strong><br> 0505 004 50 75</p>
 
     <p><strong>Ödeme Yöntemleri:</strong><br>
     Havale / EFT – Kapıda Ödeme</p>
 
     <p><strong>Kargo:</strong><br>
     Türkiye’nin her yerine hızlı gönderim</p>
+
 </footer>
 
 <!-- =================== MENÜ SCRIPT =================== -->
@@ -430,11 +455,10 @@ function toggleMenu() {
 </script>
 
 <!-- =================== SABİT WHATSAPP BUTONU =================== -->
-<a class="wp-fab" href="https://wa.me/905050045075?text=Merhaba,%20yeni%20sitesinden%20yazıyorum.%20Bilgi%20almak%20istiyorum.">
-    <img src="whatsapp.png" alt="WhatsApp">
+<a class="wp-fab" href="https://wa.me/905050045075?text=Merhaba,%20bilgi%20almak%20istiyorum.">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 </body>
 </html>
-
 
